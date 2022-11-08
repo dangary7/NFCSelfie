@@ -28,6 +28,9 @@ class SelfieViewController: UIViewController {
     override func viewDidLoad() {
         
         bundlePath = Bundle.main.path(forResource: "1448-com.fad.bio-31-10-2022", ofType: "lic") ?? ""
+        startColor = .systemBackground
+        middleColor = .systemBackground
+        endColor = .systemBackground
     }
     
     @IBAction func startSelfie(_ sender: Any) {
@@ -49,17 +52,25 @@ class SelfieViewController: UIViewController {
         instance.endColor = endColor
         
         instance.templates.removeAll()
-        
         instance.templates.append(.png)
+        
         instance.isCustomResultScreen = false
         instance.isCustomIntroScreen = false
         instance.isLogEnabled = true
         instance.isInitialize = true
+        
+        instance.headerTextColor = .label
+        instance.standard_ui_okay = .clear
+        instance.standard_ui_not_okay = .clear
+        instance.textBackgroundColor = .systemBackground
+        instance.ui_msg_okay = .systemGray4
+        instance.ui_msg_not_okay = .systemGray4
+        
+        
                 
         var faceMatch : FaceMatcher!
         let instat = FaceLocalMatch()
         faceMatch = FaceLocalMatcher(instat.getLocalMatcher())
-        
         
         instance.verifyWithPictureID(viewcontrol: self, faceMatcher: faceMatch, imageData: UserDefaults.standard.data(forKey: "foto")!, templateType: FaceAppTemplateFormat.png) { responseModel, transactionID, noOfAttempts in
             let dict : Dictionary<String,Any> = (responseModel?.responseDictionary)!

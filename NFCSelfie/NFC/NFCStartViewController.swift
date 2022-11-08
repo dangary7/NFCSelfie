@@ -77,13 +77,13 @@ class NFCStartViewController: UIViewController {
         Log.storeLogs = settings.shouldCaptureLogs
         Log.clearStoredLogs()
         
-        Log.error( "Using version \(UIApplication.version)" )
+        Log.error( "Usando  versión \(UIApplication.version)" )
         
         Task {
             let customMessageHandler : (NFCViewDisplayMessage)->String? = { (displayMessage) in
                 switch displayMessage {
                     case .requestPresentPassport:
-                        return "Hold your iPhone near an NFC enabled passport."
+                        return "Manten tu iPhone cerca de tu pasaporte."
                     default:
                         // Return nil for all other messages so we use the provided default
                         return nil

@@ -36,7 +36,7 @@ class ResultsViewController : UIViewController {
         selfieImage.image = UIImage(data: usDef.data(forKey: "selfie")!)
         nivelSimilitud.text = "\(usDef.float(forKey: "score"))% de similitud"
         
-        if usDef.float(forKey: "score") < 80 {
+        if usDef.float(forKey: "score") < 50 {
             indicatorView.backgroundColor = UIColor.red
             indicatorLabel.text = "Validación no exitosa"
         }
