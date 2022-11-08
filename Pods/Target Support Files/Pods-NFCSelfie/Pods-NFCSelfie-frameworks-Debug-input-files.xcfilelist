@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-NFCSelfie/Pods-NFCSelfie-frameworks.sh
+${PODS_ROOT}/IdentyFace/IdentyFace.framework
+${PODS_ROOT}/IdentyFaceLocal/IdentyFaceLocal.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL

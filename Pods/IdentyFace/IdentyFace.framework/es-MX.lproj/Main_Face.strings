@@ -1,0 +1,215 @@
+
+/* Class = "UILabel"; text = "Additional Tips"; ObjectID = "23O-bx-RPv"; */
+"23O-bx-RPv.text" = "Additional Tips";
+
+/* Class = "UILabel"; text = "We need to retake the picture"; ObjectID = "2pf-Rp-c27"; */
+"2pf-Rp-c27.text" = "We need to retake the picture";
+
+/* Class = "UILabel"; text = "Use normal indoor lighting"; ObjectID = "6TQ-Zc-qc6"; */
+"6TQ-Zc-qc6.text" = "Use normal indoor lighting";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "6we-Q4-uHs"; */
+"6we-Q4-uHs.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Authenticated"; ObjectID = "9w1-HW-6s4"; */
+"9w1-HW-6s4.text" = "Authenticated";
+
+/* Class = "UILabel"; text = "1.Extend and keep fingers together"; ObjectID = "Ccr-md-Pp4"; */
+"Ccr-md-Pp4.text" = "1.Extend and keep fingers together";
+
+/* Class = "UILabel"; text = "Are you using your real hand to authenticate?"; ObjectID = "FC3-qS-00x"; */
+"FC3-qS-00x.text" = "Are you using your real hand to authenticate?";
+
+/* Class = "UILabel"; text = "4.Wait for automatic capture(Until flash goes off)"; ObjectID = "FUY-48-zfp"; */
+"FUY-48-zfp.text" = "4.Wait for automatic capture(Until flash goes off)";
+
+/* Class = "UILabel"; text = "Use your real fingers"; ObjectID = "O0W-lw-1ff"; */
+"O0W-lw-1ff.text" = "Use your real fingers";
+
+/* Class = "UILabel"; text = "Your fingers face the camera"; ObjectID = "OBg-Oi-oWa"; */
+"OBg-Oi-oWa.text" = "Your fingers face the camera";
+
+/* Class = "UILabel"; text = "3.Stay still inside the blue rectangle"; ObjectID = "SU1-4U-1W8"; */
+"SU1-4U-1W8.text" = "3.Stay still inside the blue rectangle";
+
+/* Class = "UILabel"; text = "2.Place fingers in front of camera"; ObjectID = "Ubc-W1-v6L"; */
+"Ubc-W1-v6L.text" = "2.Place fingers in front of camera";
+
+/* Class = "UIButton"; normalTitle = "Don't show me again"; ObjectID = "Vg5-m5-cuj"; */
+"Vg5-m5-cuj.normalTitle" = "Don't show me again";
+
+/* Class = "UIButton"; normalTitle = "Retake"; ObjectID = "XyS-5X-KjL"; */
+"XyS-5X-KjL.normalTitle" = "Retake";
+
+/* Class = "UILabel"; text = "PICTURE QUALITY FAILED"; ObjectID = "c63-PC-w7t"; */
+"c63-PC-w7t.text" = "PICTURE QUALITY FAILED";
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "jc1-5a-sEW"; */
+"jc1-5a-sEW.normalTitle" = "Close";
+
+/* Class = "UILabel"; text = "Try a different location/background"; ObjectID = "leH-EJ-dfi"; */
+"leH-EJ-dfi.text" = "Try a different location/background";
+
+/* Class = "UILabel"; text = "Additional Tips"; ObjectID = "mUW-WV-b90"; */
+"mUW-WV-b90.text" = "Additional Tips";
+
+/* Class = "UILabel"; text = "Your fingers are inside blue box"; ObjectID = "nFg-gF-TcJ"; */
+"nFg-gF-TcJ.text" = "Your fingers are inside blue box";
+
+/* Class = "UILabel"; text = "Use normal indoor lighting"; ObjectID = "p6L-Tt-Zlk"; */
+"p6L-Tt-Zlk.text" = "Use normal indoor lighting";
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "pbN-3P-Dcb"; */
+"pbN-3P-Dcb.normalTitle" = "Close";
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "tOh-3e-SPg"; */
+"tOh-3e-SPg.normalTitle" = "Continue";
+
+/* Class = "UILabel"; text = "Make sure you hold still untill automatic capture"; ObjectID = "xxm-4z-Y71"; */
+"xxm-4z-Y71.text" = "Make sure you hold still untill automatic capture";
+
+/* Class = "UILabel"; text = "Spoof Detected"; ObjectID = "yec-I1-Xxi"; */
+"yec-I1-Xxi.text" = "Spoof Detected";
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "zbd-lq-F3v"; */
+"zbd-lq-F3v.normalTitle" = "Close";
+
+
+/*Internet Check*/
+"identy_no_internet" = "No internet connection";
+"identy_enable_internet_message" = "Please enable Internet";
+"identy_alert" = "Alert";
+"identy_settings" = "Settings";
+"identy_cancel" = "Cancel";
+"identy_no_internet" = "Please check your Internet connection";
+"identy_enable_internet_message" = "Please enable Internet";
+"identy_initialization_failed" = "Initialization Failed";
+"identy_jailbroken_device" = "Device is Jailbroken";
+"identy_activity_paused" = "Activity paused";
+"identy_back_pressed" = "Activity paused on clicking back";
+"identy_timeout" = "Transaction Timeout";
+"identy_limit_exceeded" = "Transaction limit exceeded";
+"identy_nistgenration_failed" = "Failed to generate NIST file";
+"identy_templategenration_failed" = "Failed to generate Template";
+"identy_invalid_input" = "Invalid input";
+"id_unable_to_retrieve_file" = "Unable to retrieve File";
+"id_unable_to_retrieve_template" = "Unable to retrieve Template";
+"id_unable_to_convert_imageformat" = "Unable to convert to Image Format";
+"id_file_not_found" = "File not found";
+"id_encryption_failed" = "Encryption Failed";
+
+
+"id_close" = "Close";
+"id_yes" = "Yes";
+"id_no" = "No";
+/*FingerResultViewController*/
+//"identy_nfiq" = "NFIQ";
+//"identy_score" = "Score";
+
+"id_enrollment_completed" =  "Enrollment Completed";
+"id_success_match" =  "Successfully Verified";
+"id_authentication_unsuccessful" = "Verification Failed";
+"id_capture_successful" = "Capture Completed";
+
+"identy_score" = "Score";
+
+
+/*CameraViewController*/
+"id_badlighting" = "Avoid shadows";
+"id_searching_face" = "Searching Face";
+
+
+"id_spoof" = "Spoof";
+"id_hold" = "Please hold";
+"id_hold_0" = "Please hold 0";
+"id_hold_1" = "Please hold 1";
+"id_hold_2" = "Please hold 2";
+"id_hold_3" = "Please hold 3";
+"id_hold_4" = "Please hold 4";
+"id_capturing" = "Capturing..";
+"id_captured" = "Captured";
+"id_inside_guide" = "Please be inside the guide";
+"id_stable" = "Please be stable";
+"id_next_hand_confirm" = "Next Detection Confirm";
+"id_next_detection" = "Move to next hand?";
+
+
+/*IntroScreenViewController*/
+
+"id_keep_fingers" = "1.Extend and keep fingers together";
+"id_in_front_camera" = "2.Place fingers in front of camera";
+"id_stay_still_blue" = "3.Stay still inside the blue rectangle";
+"id_wait_auto" = "4.Wait for automatic capture(Until flash goes off)";
+"id_next" = "Next";
+"id_dshow_again" = "Don't show me again";
+
+
+"identy_please_wait" = "Processing...";
+"id_keep_head_straight" = "Keep your head straight";
+/*Spoof*/
+
+"id_spoof_title" = "Spoof Detected";
+"id_spoof_question" = "Are you using your real hand to authenticate?";
+"id_spoof_additional_tip" = "Additional Tips";
+"id_spoof_tip_1" = "Use your real fingers";
+"id_spoof_tip_2" = "Use normal indoor lighting";
+"id_spoof_tip_3" = "Try a different location/background";
+"id_continue" = "Continue";
+
+/*Picture Quality*/
+
+"id_pic_qc_title" = "PICTURE QUALITY FAILED";
+"id_qc_retake" = "We need to retake the picture";
+"id_hold_still" = "Make sure you hold still untill automatic capture";
+"id_retake_additional_tip" = "Additional Tips";
+"id_retake_tip_1" = "Your fingers face the camera";
+"id_retake_tip_2" = "Your fingers are inside blue box";
+"id_retake_tip_3" = "Use normal indoor lighting";
+"id_retake" = "Retake";
+
+
+"id_bring_face_inside" = "Bring face inside";
+"id_bring_face_closer" = "Bring face closer";
+"id_center_face" = "Look straight";
+"id_move_face_away" = "Move your face away";
+"id_frame_your_face" = "Frame your face";
+"id_alert_box" =  "Alert";
+"id_alert_msg" = "Something is wrong please try again";
+"id_alert_btn"  = "OK";
+"id_alert_nonetwork" = "No network Connection";
+"id_phone_to_eye_level" = "Bring phone to eye level";
+"id_face_oval_center" = "Center your face in oval";
+"id_face_look_straight" = "Look Straight";
+"id_face_looking_down" = "Look up to be parallel to camera";
+"id_face_looking_right" = "Looking Right, Please Look straight";
+"id_face_looking_left" = "Looking Left, Please Look straight";
+"id_face_looking_up" = "Look Down to be parallel to camera";
+
+"id_eyes_closed" = "Eyes Closed";
+"identy_camera_permission"  = "Permission to access Camera";
+"identy_camera_permission_message" = "App doesn't have permission to use the camera, please change privacy settings";
+"identy_initialize" = "Initializing...";
+"identy_exit" = "Do you want to exit Capture?";
+//Spoof alert
+"id_something_weird" = "Something is weird, move slightly to change lighting";
+"id_try_again_btn"   = "Try again";
+"id_nistcreated" = "ANSI/NIST file generated...";
+"id_noface" = "No face detected";
+"id_timeout" = "Timed Out";
+"id_unsuccessful_recognition" =  "Unsuccessful Recognition";
+"id_ok" = "Ok";
+
+
+//FaceViewController
+"id_eyes_closed" = "Closed";
+"id_eyes_open" =  "Open";
+"id_eyes_not_visible" = "Not Visible";
+"id_eyes_visible" = "Visible";
+
+
+"id_something_is_weird_error" =  "Something is Weird";
+//Errors
+"id_license_not_exist" = "Unable to find license";
+"id_license_empty" = "License is empty";
+"id_validation_failed" = "License validation failed";
+"id_license_not_connect" = "Unable to connect to License server";

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detalles de pasaporte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6O7-qM-KTf">
+                                <rect key="frame" x="30" y="97" width="330" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Número de pasaporte" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="va2-qk-TZx">
+                                <rect key="frame" x="30" y="212.66666666666666" width="330" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de nacimiento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0X-yB-8xy">
+                                <rect key="frame" x="30" y="348.66666666666669" width="157.66666666666666" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de expiración" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fj-kb-wBe">
+                                <rect key="frame" x="215.33333333333331" y="348.66666666666669" width="152.33333333333331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="SSe-lA-VA9">
+                                <rect key="frame" x="33" y="419.66666666666669" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6rg-H0-UCh"/>
+                                    <constraint firstAttribute="width" constant="150" id="HxO-Wg-mS9"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="dobDatePicker:" destination="Y6W-OH-hqX" eventType="valueChanged" id="0RE-w5-da1"/>
+                                </connections>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Mrb-Fm-JXK">
+                                <rect key="frame" x="221" y="419.66666666666669" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="k5b-tM-HLf"/>
+                                    <constraint firstAttribute="width" constant="150" id="wpb-hd-0mN"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="doeDatePicker:" destination="Y6W-OH-hqX" eventType="valueChanged" id="KMx-f3-Cfe"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsv-7S-cU5">
+                                <rect key="frame" x="55" y="594.66666666666663" width="280" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="zpZ-ds-A8f"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Escanear Pasaporte">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="NFCScan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jKB-Ie-TTR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="va2-qk-TZx" firstAttribute="top" secondItem="6O7-qM-KTf" secondAttribute="bottom" constant="75" id="0T8-Of-dKk"/>
+                            <constraint firstItem="SSe-lA-VA9" firstAttribute="centerX" secondItem="O0X-yB-8xy" secondAttribute="centerX" constant="-1" id="1jl-3p-OUF"/>
+                            <constraint firstItem="O0X-yB-8xy" firstAttribute="width" secondItem="3fj-kb-wBe" secondAttribute="width" multiplier="1.03501" id="7a0-ez-Si4"/>
+                            <constraint firstItem="3fj-kb-wBe" firstAttribute="centerY" secondItem="O0X-yB-8xy" secondAttribute="centerY" id="7sF-xW-pjV"/>
+                            <constraint firstItem="O0X-yB-8xy" firstAttribute="top" secondItem="va2-qk-TZx" secondAttribute="bottom" constant="100" id="BrR-Hx-ivK"/>
+                            <constraint firstItem="6O7-qM-KTf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="G6L-Rg-WDH"/>
+                            <constraint firstItem="Mrb-Fm-JXK" firstAttribute="centerX" secondItem="3fj-kb-wBe" secondAttribute="centerX" constant="4.3333333333333712" id="IXc-w9-Y6W"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3fj-kb-wBe" secondAttribute="trailing" constant="22.333333333333371" id="Jsu-xh-0fx"/>
+                            <constraint firstItem="nsv-7S-cU5" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="KNE-VB-CnD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="va2-qk-TZx" secondAttribute="trailing" constant="30" id="W1n-51-KcT"/>
+                            <constraint firstItem="Mrb-Fm-JXK" firstAttribute="centerY" secondItem="SSe-lA-VA9" secondAttribute="centerY" id="YGM-dC-ZaT"/>
+                            <constraint firstItem="O0X-yB-8xy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="YgF-ex-GG0"/>
+                            <constraint firstItem="6O7-qM-KTf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="ZjB-ou-90J"/>
+                            <constraint firstItem="nsv-7S-cU5" firstAttribute="top" secondItem="SSe-lA-VA9" secondAttribute="bottom" constant="125" id="boX-1I-HKz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6O7-qM-KTf" secondAttribute="trailing" constant="30" id="gX6-G6-IFI"/>
+                            <constraint firstItem="va2-qk-TZx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="kOa-5F-ib7"/>
+                            <constraint firstItem="SSe-lA-VA9" firstAttribute="top" secondItem="O0X-yB-8xy" secondAttribute="bottom" constant="50" id="uLe-52-xZm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dobPicker" destination="SSe-lA-VA9" id="1ot-Ih-Kjc"/>
+                        <outlet property="doePicker" destination="Mrb-Fm-JXK" id="SCW-fd-bes"/>
+                        <outlet property="numPasaporteTextField" destination="va2-qk-TZx" id="IDj-mi-L2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.46153846153845" y="-2.1327014218009479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

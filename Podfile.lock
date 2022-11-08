@@ -1,0 +1,27 @@
+PODS:
+  - IdentyFace (4.2.0)
+  - IdentyFaceLocal (4.2.0)
+  - OpenSSL-Universal (1.1.1700)
+
+DEPENDENCIES:
+  - IdentyFace (= 4.2.0)
+  - IdentyFaceLocal (= 4.2.0)
+  - OpenSSL-Universal (from `/Users/danielgaribay/Desktop/OpenSSL/OpenSSL`)
+
+SPEC REPOS:
+  https://identy.jfrog.io/identy/api/pods/cocoapods-identy-face:
+    - IdentyFace
+    - IdentyFaceLocal
+
+EXTERNAL SOURCES:
+  OpenSSL-Universal:
+    :path: "/Users/danielgaribay/Desktop/OpenSSL/OpenSSL"
+
+SPEC CHECKSUMS:
+  IdentyFace: fa57f9568d2b9eab869fa385e66ed56eedee07cc
+  IdentyFaceLocal: 0a7d01f505f5fde386c915b4711918e241fdbf2a
+  OpenSSL-Universal: ee0a7a25f2042782e2df405e66db3e429198e392
+
+PODFILE CHECKSUM: 61369844f1fb5ee0602aa03eceaa531d7698c890
+
+COCOAPODS: 1.11.3

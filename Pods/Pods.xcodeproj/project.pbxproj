@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4D6B828F567986C15420757684C46F75 /* IdentyFaceLocal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 05270F6CD6678A3F21C114CA3DE6FA54 /* Build configuration list for PBXAggregateTarget "IdentyFaceLocal" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = IdentyFaceLocal;
+		};
+		B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C1D72BC345233EADF30A97D462F723B7 /* Build configuration list for PBXAggregateTarget "OpenSSL-Universal" */;
+			buildPhases = (
+				DAEA2BAAFED7B7865CB41712646E4160 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = "OpenSSL-Universal";
+		};
+		BB6C3A80F7B89DA30E2D701A07B0EE08 /* IdentyFace */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D40FD6EC1626D327CACB075EFBD251AE /* Build configuration list for PBXAggregateTarget "IdentyFace" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = IdentyFace;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		1A9247DB96EEFE61B12B321829B8F303 /* Pods-NFCSelfie-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BAD400E7A76C514A90031F17DB78104B /* Pods-NFCSelfie-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4A808C0BAA1B7B730B4FCF58C5712BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		DFE9164ADBB94056FF481C5960AD6EE5 /* Pods-NFCSelfie-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A6216B33D2F22EC39EA652BB141C01 /* Pods-NFCSelfie-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		285F0749F59B7D577DFC3B607A34EAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D6B828F567986C15420757684C46F75;
+			remoteInfo = IdentyFaceLocal;
+		};
+		2E3986EA8F94E48FB696166DAEA85B45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB6C3A80F7B89DA30E2D701A07B0EE08;
+			remoteInfo = IdentyFace;
+		};
+		3A58C13737CAE9AFADF8EB261229DC7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9ED5194E665042005069EF06C82A050;
+			remoteInfo = "OpenSSL-Universal";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02BB8474926555958A372C064AB1B849 /* IdentyFaceLocal-Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IdentyFaceLocal-Swift.h"; path = "IdentyFaceLocal.framework/Headers/IdentyFaceLocal-Swift.h"; sourceTree = "<group>"; };
+		12233453B8F0F7DDDE8145A2E6CBE432 /* Pods-NFCSelfie-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NFCSelfie-frameworks.sh"; sourceTree = "<group>"; };
+		21FD6F96A7CAC54C4B5A613B31FE403F /* IdentyFaceLocal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IdentyFaceLocal.debug.xcconfig; sourceTree = "<group>"; };
+		3DC4955CDD5A6F9EA40CAFDFB342F533 /* IdentyFace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IdentyFace.release.xcconfig; sourceTree = "<group>"; };
+		42B413A000006B4D7AFB424EA64FF7CA /* IdentyFace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IdentyFace.debug.xcconfig; sourceTree = "<group>"; };
+		4E9A87F90EAF6E214EB42ABDAA8617D1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4FD774690556ADB18EFCC47BE2BE4AC5 /* OpenSSL-Universal-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "OpenSSL-Universal-xcframeworks.sh"; sourceTree = "<group>"; };
+		53B005DF4D7183B3BD253C0AAB1153B4 /* IdentyFaceLocal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IdentyFaceLocal.release.xcconfig; sourceTree = "<group>"; };
+		569A184123329A0047EE7BD14BB5D6AC /* IdentyFaceLocal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IdentyFaceLocal.h; path = IdentyFaceLocal.framework/Headers/IdentyFaceLocal.h; sourceTree = "<group>"; };
+		5AF29BFF38230B0539F2D77FD95CC824 /* IdentyFaceLocal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IdentyFaceLocal.framework; sourceTree = "<group>"; };
+		617351B65CB2A56845ED99E51285C8FA /* OpenSSL.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = OpenSSL.xcframework; path = Frameworks/OpenSSL.xcframework; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		762AA625DA5A61A940C9D75BEE581CCA /* OpenSSL-Universal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OpenSSL-Universal.release.xcconfig"; sourceTree = "<group>"; };
+		8165011DECD31BC47EC27DBE5426E3D7 /* Pods-NFCSelfie-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFCSelfie-Info.plist"; sourceTree = "<group>"; };
+		8E7E2BECFC017CC718CE85BAF5E03DEC /* OpenSSL-Universal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OpenSSL-Universal.debug.xcconfig"; sourceTree = "<group>"; };
+		92A6216B33D2F22EC39EA652BB141C01 /* Pods-NFCSelfie-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NFCSelfie-dummy.m"; sourceTree = "<group>"; };
+		998C5795BC6B8AB6C8F61C8FE7D7E1BD /* Pods-NFCSelfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFCSelfie.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAD400E7A76C514A90031F17DB78104B /* Pods-NFCSelfie-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NFCSelfie-umbrella.h"; sourceTree = "<group>"; };
+		BB9E50D2AD42202BD35EFBF88CAEDB47 /* Pods-NFCSelfie.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NFCSelfie.modulemap"; sourceTree = "<group>"; };
+		C8EFD35ED3A0B831A94FD42217AB7552 /* IdentyFace.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IdentyFace.framework; sourceTree = "<group>"; };
+		DA87C10958DAA4FA2F9F1E29E1D7A577 /* Pods-NFCSelfie */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-NFCSelfie"; path = Pods_NFCSelfie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF2C9A4F401D8E124F219E154AA56F4 /* Pods-NFCSelfie-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFCSelfie-acknowledgements.plist"; sourceTree = "<group>"; };
+		E4D3C086754C1EC067001139364D91A1 /* Pods-NFCSelfie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFCSelfie.debug.xcconfig"; sourceTree = "<group>"; };
+		E6C9F20BC8AD87AEA2754E8CBB5165EF /* Pods-NFCSelfie-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NFCSelfie-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EBF5FCA1E3D0643CC77613FF4C09C819 /* IdentyFace-Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IdentyFace-Swift.h"; path = "IdentyFace.framework/Headers/IdentyFace-Swift.h"; sourceTree = "<group>"; };
+		F03E882C658A48D3B0669C450DA669F4 /* IdentyFace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IdentyFace.h; path = IdentyFace.framework/Headers/IdentyFace.h; sourceTree = "<group>"; };
+		F0D462BD2118278C3F889A227EC2287E /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		F82B3DD063B63CC810B6F4BEE4F88483 /* OpenSSL-Universal.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "OpenSSL-Universal.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		179954F015847F2850CD0FFA01D620A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4A808C0BAA1B7B730B4FCF58C5712BA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05223ADF63CFC5EB29DDA2A4C774C54C /* IdentyFace */ = {
+			isa = PBXGroup;
+			children = (
+				F03E882C658A48D3B0669C450DA669F4 /* IdentyFace.h */,
+				EBF5FCA1E3D0643CC77613FF4C09C819 /* IdentyFace-Swift.h */,
+				4385B4F01CC48BAE5B1FCA2B27072452 /* Frameworks */,
+				0FDA554558578ADD22813C73C8A5AEC8 /* Support Files */,
+			);
+			name = IdentyFace;
+			path = IdentyFace;
+			sourceTree = "<group>";
+		};
+		0A6C411556F9E8F2C3A65423410BE8B8 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48D6DF63A1931EF12821FBACD410B0A5 /* OpenSSL-Universal */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		0FDA554558578ADD22813C73C8A5AEC8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				42B413A000006B4D7AFB424EA64FF7CA /* IdentyFace.debug.xcconfig */,
+				3DC4955CDD5A6F9EA40CAFDFB342F533 /* IdentyFace.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IdentyFace";
+			sourceTree = "<group>";
+		};
+		2F5ED33FB72354FE0D01F2D38AF0A7E7 /* IdentyFaceLocal */ = {
+			isa = PBXGroup;
+			children = (
+				569A184123329A0047EE7BD14BB5D6AC /* IdentyFaceLocal.h */,
+				02BB8474926555958A372C064AB1B849 /* IdentyFaceLocal-Swift.h */,
+				A1A257BD55520839763408E36255BD91 /* Frameworks */,
+				4213B76A63418479525DD05D96A6BEEC /* Support Files */,
+			);
+			name = IdentyFaceLocal;
+			path = IdentyFaceLocal;
+			sourceTree = "<group>";
+		};
+		4213B76A63418479525DD05D96A6BEEC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				21FD6F96A7CAC54C4B5A613B31FE403F /* IdentyFaceLocal.debug.xcconfig */,
+				53B005DF4D7183B3BD253C0AAB1153B4 /* IdentyFaceLocal.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IdentyFaceLocal";
+			sourceTree = "<group>";
+		};
+		4385B4F01CC48BAE5B1FCA2B27072452 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8EFD35ED3A0B831A94FD42217AB7552 /* IdentyFace.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48D6DF63A1931EF12821FBACD410B0A5 /* OpenSSL-Universal */ = {
+			isa = PBXGroup;
+			children = (
+				9E435D72730194D6E55BA0C1B53EB1AE /* Frameworks */,
+				904B54A5D031800C2A9485B11D58A467 /* Pod */,
+				5AFBA14CC2F729A185A7BCA892AF8823 /* Support Files */,
+			);
+			name = "OpenSSL-Universal";
+			path = /Users/danielgaribay/Desktop/OpenSSL/OpenSSL;
+			sourceTree = "<absolute>";
+		};
+		4AB69405F54C2504E85A129F278250DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05223ADF63CFC5EB29DDA2A4C774C54C /* IdentyFace */,
+				2F5ED33FB72354FE0D01F2D38AF0A7E7 /* IdentyFaceLocal */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5AFBA14CC2F729A185A7BCA892AF8823 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4FD774690556ADB18EFCC47BE2BE4AC5 /* OpenSSL-Universal-xcframeworks.sh */,
+				8E7E2BECFC017CC718CE85BAF5E03DEC /* OpenSSL-Universal.debug.xcconfig */,
+				762AA625DA5A61A940C9D75BEE581CCA /* OpenSSL-Universal.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../NAATProjects/DesarrollosNuevos/NFCSelfie/Pods/Target Support Files/OpenSSL-Universal";
+			sourceTree = "<group>";
+		};
+		87A4CDE9584AC2F227D8A86A5B49AB65 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4DC31AD85341E94D938C2564400156C /* Pods-NFCSelfie */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		904B54A5D031800C2A9485B11D58A467 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F0D462BD2118278C3F889A227EC2287E /* LICENSE.txt */,
+				F82B3DD063B63CC810B6F4BEE4F88483 /* OpenSSL-Universal.podspec */,
+				4E9A87F90EAF6E214EB42ABDAA8617D1 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		9E435D72730194D6E55BA0C1B53EB1AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				617351B65CB2A56845ED99E51285C8FA /* OpenSSL.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1A257BD55520839763408E36255BD91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AF29BFF38230B0539F2D77FD95CC824 /* IdentyFaceLocal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4DC31AD85341E94D938C2564400156C /* Pods-NFCSelfie */ = {
+			isa = PBXGroup;
+			children = (
+				BB9E50D2AD42202BD35EFBF88CAEDB47 /* Pods-NFCSelfie.modulemap */,
+				E6C9F20BC8AD87AEA2754E8CBB5165EF /* Pods-NFCSelfie-acknowledgements.markdown */,
+				DAF2C9A4F401D8E124F219E154AA56F4 /* Pods-NFCSelfie-acknowledgements.plist */,
+				92A6216B33D2F22EC39EA652BB141C01 /* Pods-NFCSelfie-dummy.m */,
+				12233453B8F0F7DDDE8145A2E6CBE432 /* Pods-NFCSelfie-frameworks.sh */,
+				8165011DECD31BC47EC27DBE5426E3D7 /* Pods-NFCSelfie-Info.plist */,
+				BAD400E7A76C514A90031F17DB78104B /* Pods-NFCSelfie-umbrella.h */,
+				E4D3C086754C1EC067001139364D91A1 /* Pods-NFCSelfie.debug.xcconfig */,
+				998C5795BC6B8AB6C8F61C8FE7D7E1BD /* Pods-NFCSelfie.release.xcconfig */,
+			);
+			name = "Pods-NFCSelfie";
+			path = "Target Support Files/Pods-NFCSelfie";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				0A6C411556F9E8F2C3A65423410BE8B8 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				4AB69405F54C2504E85A129F278250DC /* Pods */,
+				F3D1386F8C41037AFA3C398A646BD926 /* Products */,
+				87A4CDE9584AC2F227D8A86A5B49AB65 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3D1386F8C41037AFA3C398A646BD926 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA87C10958DAA4FA2F9F1E29E1D7A577 /* Pods-NFCSelfie */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		23738653EAFAE74643991CB46C0D096D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A9247DB96EEFE61B12B321829B8F303 /* Pods-NFCSelfie-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C9002623C629DBD069DE3670455E9F90 /* Pods-NFCSelfie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DE1A6CBB41C8B82216C30D240E42A8D /* Build configuration list for PBXNativeTarget "Pods-NFCSelfie" */;
+			buildPhases = (
+				23738653EAFAE74643991CB46C0D096D /* Headers */,
+				C7402296F319FBAA00824BE8C46DC86A /* Sources */,
+				179954F015847F2850CD0FFA01D620A5 /* Frameworks */,
+				D6C0E0754704EC88BCBDC417B0C44CCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4046A82F78A8507E684F4C8F46A6A3C2 /* PBXTargetDependency */,
+				26856A0C8DF33B4E4CE5FD0A25523E66 /* PBXTargetDependency */,
+				AF591275FDCFCB2E42F5EA477C774E2E /* PBXTargetDependency */,
+			);
+			name = "Pods-NFCSelfie";
+			productName = Pods_NFCSelfie;
+			productReference = DA87C10958DAA4FA2F9F1E29E1D7A577 /* Pods-NFCSelfie */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = F3D1386F8C41037AFA3C398A646BD926 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB6C3A80F7B89DA30E2D701A07B0EE08 /* IdentyFace */,
+				4D6B828F567986C15420757684C46F75 /* IdentyFaceLocal */,
+				B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */,
+				C9002623C629DBD069DE3670455E9F90 /* Pods-NFCSelfie */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6C0E0754704EC88BCBDC417B0C44CCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DAEA2BAAFED7B7865CB41712646E4160 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/OpenSSL-Universal/OpenSSL-Universal-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/OpenSSL-Universal/OpenSSL-Universal-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/OpenSSL-Universal/OpenSSL-Universal-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7402296F319FBAA00824BE8C46DC86A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE9164ADBB94056FF481C5960AD6EE5 /* Pods-NFCSelfie-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26856A0C8DF33B4E4CE5FD0A25523E66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IdentyFaceLocal;
+			target = 4D6B828F567986C15420757684C46F75 /* IdentyFaceLocal */;
+			targetProxy = 285F0749F59B7D577DFC3B607A34EAD3 /* PBXContainerItemProxy */;
+		};
+		4046A82F78A8507E684F4C8F46A6A3C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IdentyFace;
+			target = BB6C3A80F7B89DA30E2D701A07B0EE08 /* IdentyFace */;
+			targetProxy = 2E3986EA8F94E48FB696166DAEA85B45 /* PBXContainerItemProxy */;
+		};
+		AF591275FDCFCB2E42F5EA477C774E2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "OpenSSL-Universal";
+			target = B9ED5194E665042005069EF06C82A050 /* OpenSSL-Universal */;
+			targetProxy = 3A58C13737CAE9AFADF8EB261229DC7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		27FA15FB077039009761350EC7559888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21FD6F96A7CAC54C4B5A613B31FE403F /* IdentyFaceLocal.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3C536E07DB344B2DBB799FC0E8471D9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42B413A000006B4D7AFB424EA64FF7CA /* IdentyFace.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45843BD8C9A61FAA80B9C1553E421D86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 762AA625DA5A61A940C9D75BEE581CCA /* OpenSSL-Universal.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		8FBE6D66366E266E780CFCF34617C067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53B005DF4D7183B3BD253C0AAB1153B4 /* IdentyFaceLocal.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFA7DFF8A59E766A145A754042886901 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DC4955CDD5A6F9EA40CAFDFB342F533 /* IdentyFace.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C15CA637FCE8F87370758670F98CC0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 998C5795BC6B8AB6C8F61C8FE7D7E1BD /* Pods-NFCSelfie.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NFCSelfie/Pods-NFCSelfie-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NFCSelfie/Pods-NFCSelfie.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D6D289E822CC9029FDA232E3E8083D66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4D3C086754C1EC067001139364D91A1 /* Pods-NFCSelfie.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NFCSelfie/Pods-NFCSelfie-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NFCSelfie/Pods-NFCSelfie.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F70FB2C772CB3A9B68A75AA06B76A888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7E2BECFC017CC718CE85BAF5E03DEC /* OpenSSL-Universal.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05270F6CD6678A3F21C114CA3DE6FA54 /* Build configuration list for PBXAggregateTarget "IdentyFaceLocal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27FA15FB077039009761350EC7559888 /* Debug */,
+				8FBE6D66366E266E780CFCF34617C067 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DE1A6CBB41C8B82216C30D240E42A8D /* Build configuration list for PBXNativeTarget "Pods-NFCSelfie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6D289E822CC9029FDA232E3E8083D66 /* Debug */,
+				C15CA637FCE8F87370758670F98CC0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1D72BC345233EADF30A97D462F723B7 /* Build configuration list for PBXAggregateTarget "OpenSSL-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70FB2C772CB3A9B68A75AA06B76A888 /* Debug */,
+				45843BD8C9A61FAA80B9C1553E421D86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D40FD6EC1626D327CACB075EFBD251AE /* Build configuration list for PBXAggregateTarget "IdentyFace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C536E07DB344B2DBB799FC0E8471D9E /* Debug */,
+				BFA7DFF8A59E766A145A754042886901 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

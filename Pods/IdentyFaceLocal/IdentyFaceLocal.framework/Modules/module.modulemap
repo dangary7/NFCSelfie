@@ -1,0 +1,11 @@
+framework module IdentyFaceLocal {
+  umbrella header "IdentyFaceLocal.h"
+
+  export *
+  module * { export * }
+}
+
+module IdentyFaceLocal.Swift {
+  header "IdentyFaceLocal-Swift.h"
+  requires objc
+}

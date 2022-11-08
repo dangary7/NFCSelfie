@@ -1,0 +1,11 @@
+framework module IdentyFace {
+  umbrella header "IdentyFace.h"
+
+  export *
+  module * { export * }
+}
+
+module IdentyFace.Swift {
+  header "IdentyFace-Swift.h"
+  requires objc
+}

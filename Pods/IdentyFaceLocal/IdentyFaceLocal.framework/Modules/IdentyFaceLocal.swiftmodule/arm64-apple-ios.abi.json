@@ -1,0 +1,108 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "IdentyFaceLocal",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Function",
+        "name": "DLog",
+        "printedName": "DLog(_:_:)",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "String",
+            "printedName": "Swift.String",
+            "usr": "s:SS"
+          },
+          {
+            "kind": "TypeNominal",
+            "name": "ProtocolComposition",
+            "printedName": "Any"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "s:15IdentyFaceLocal4DLogyySS_yptF",
+        "mangledName": "$s15IdentyFaceLocal4DLogyySS_yptF",
+        "moduleName": "IdentyFaceLocal",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FaceLocalMatch",
+        "printedName": "FaceLocalMatch",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FaceLocalMatch",
+                "printedName": "IdentyFaceLocal.FaceLocalMatch",
+                "usr": "s:15IdentyFaceLocal0bC5MatchC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15IdentyFaceLocal0bC5MatchCACycfc",
+            "mangledName": "$s15IdentyFaceLocal0bC5MatchCACycfc",
+            "moduleName": "IdentyFaceLocal",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getLocalMatcher",
+            "printedName": "getLocalMatcher()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15IdentyFaceLocal0bC5MatchC03getC7MatcherSbyF",
+            "mangledName": "$s15IdentyFaceLocal0bC5MatchC03getC7MatcherSbyF",
+            "moduleName": "IdentyFaceLocal",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15IdentyFaceLocal0bC5MatchC",
+        "mangledName": "$s15IdentyFaceLocal0bC5MatchC",
+        "moduleName": "IdentyFaceLocal",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}
