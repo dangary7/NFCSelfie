@@ -26,7 +26,7 @@ class OCRResultsViewController: UIViewController {
     
     @IBAction func validarPasaporte(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextVC = storyboard.instantiateViewController(withIdentifier: "NFCStartViewController")
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "SelfieViewController")
         nextVC.modalPresentationStyle = .fullScreen
         present(nextVC, animated: true)
     }

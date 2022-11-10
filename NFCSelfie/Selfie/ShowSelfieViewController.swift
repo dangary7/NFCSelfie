@@ -14,4 +14,17 @@ class ShowSelfieViewController: UIViewController {
     override func viewDidLoad() {
         selfieImage.image = UIImage(data: UserDefaults.standard.data(forKey: "selfie")!)
     }
+    @IBAction func continuar(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "NFCStartViewController")
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: true)
+    }
+    
+    @IBAction func tomarOtraFoto(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "SelfieViewController")
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: true)
+    }
 }
