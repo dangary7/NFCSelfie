@@ -597,10 +597,10 @@
             </objects>
             <point key="canvasLocation" x="3094" y="321"/>
         </scene>
-        <!--View Controller-->
+        <!--Selfie Captured View Controller-->
         <scene sceneID="ONU-Gh-XPE">
             <objects>
-                <viewController id="g4J-ET-6o7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelfieCapturedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g4J-ET-6o7" customClass="SelfieCapturedViewController" customModule="NFCSelfie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="01r-T7-la5">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -612,7 +612,7 @@
                                     <constraint firstAttribute="height" constant="62" id="4ru-pN-Oab"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Validación facial exitosa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nct-mW-Jwc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Captura facial exitosa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nct-mW-Jwc">
                                 <rect key="frame" x="85" y="376" width="220" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="r71-Qf-L2c"/>
@@ -676,12 +676,18 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Si, continuar">
                                     <color key="baseBackgroundColor" red="0.65490196079999996" green="0.023529411760000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="continuar:" destination="Se8-vE-jzM" eventType="touchUpInside" id="KfL-lT-fOI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiK-Zw-CLq">
                                 <rect key="frame" x="110.66666666666669" y="723.66666666666663" width="169" height="35"/>
                                 <color key="tintColor" red="0.65490196079999996" green="0.023529411760000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Volver a tomar foto"/>
+                                <connections>
+                                    <action selector="tomarOtraFoto:" destination="Se8-vE-jzM" eventType="touchUpInside" id="YuD-KH-6ah"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l1B-XD-fxr"/>
@@ -1049,9 +1055,10 @@
                                     <constraint firstAttribute="width" constant="345" id="8ZK-PY-hzm"/>
                                     <constraint firstAttribute="height" constant="50" id="lSq-Yv-dl8"/>
                                 </constraints>
-                                <color key="tintColor" red="0.65490196079999996" green="0.023529411760000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Volver a intentar"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Volver a intentar">
+                                    <color key="baseBackgroundColor" red="0.65490196079999996" green="0.023529411760000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="scanAgain:" destination="xox-SC-91g" eventType="touchUpInside" id="Pzu-uS-JaP"/>
                                 </connections>
@@ -1134,10 +1141,10 @@
             </objects>
             <point key="canvasLocation" x="4117" y="1182"/>
         </scene>
-        <!--View Controller-->
+        <!--Incorrect Face Match View Controller-->
         <scene sceneID="Ip0-X4-ws1">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="zKp-Aj-pjB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IncorrectFaceMatchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zKp-Aj-pjB" customClass="IncorrectFaceMatchViewController" customModule="NFCSelfie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kTX-Hi-utN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1158,16 +1165,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGb-TI-dTN">
-                                <rect key="frame" x="22.666666666666657" y="695" width="345" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="dKL-Ip-58a"/>
-                                    <constraint firstAttribute="width" constant="345" id="tzl-br-N0S"/>
-                                </constraints>
-                                <color key="tintColor" red="0.65490196079999996" green="0.023529411760000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Volver a intentar"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IT7-L5-0d0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1175,8 +1172,6 @@
                             <constraint firstItem="ygL-Qi-JK7" firstAttribute="centerX" secondItem="IT7-L5-0d0" secondAttribute="centerX" id="8Hl-Hc-ADq"/>
                             <constraint firstItem="PDy-vf-v7l" firstAttribute="top" secondItem="ygL-Qi-JK7" secondAttribute="bottom" constant="28" id="8LQ-kL-aig"/>
                             <constraint firstItem="ygL-Qi-JK7" firstAttribute="top" secondItem="kTX-Hi-utN" secondAttribute="top" constant="304" id="YOf-MF-NrL"/>
-                            <constraint firstItem="aGb-TI-dTN" firstAttribute="top" secondItem="ygL-Qi-JK7" secondAttribute="bottom" constant="332" id="cyx-E5-gHh"/>
-                            <constraint firstItem="aGb-TI-dTN" firstAttribute="centerX" secondItem="IT7-L5-0d0" secondAttribute="centerX" id="pUF-fg-JwW"/>
                             <constraint firstItem="PDy-vf-v7l" firstAttribute="centerX" secondItem="IT7-L5-0d0" secondAttribute="centerX" id="wBJ-sT-ekj"/>
                         </constraints>
                     </view>

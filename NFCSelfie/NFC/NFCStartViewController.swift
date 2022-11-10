@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import IdentyFace
+import IdentyFaceLocal
 
 @available(iOS 15, *)
 class NFCStartViewController: UIViewController {
+    
+    let bundlePath = Bundle.main.path(forResource: "1448-com.fad.bio-31-10-2022", ofType: "lic") ?? ""
     
     var settings = SettingsStore()
     var passportReader = PassportReader()
@@ -120,10 +124,20 @@ class NFCStartViewController: UIViewController {
                     usDef.set(valid, forKey: "pasaporteValido")
                     self.showDetails = true
                     
-                    let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-                    let nextVC = storyboard.instantiateViewController(withIdentifier: "SelfieViewController")
-                    nextVC.modalPresentationStyle = .fullScreen
-                    self.present(nextVC, animated: true)
+                    //Llamar comparacion de rostros
+                    self.compareFaces()
+                    
+                    if usDef.float(forKey: "score") < 50 {
+                        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+                        let nextVC = storyboard.instantiateViewController(withIdentifier: "IncorrectFaceMatchViewController")
+                        nextVC.modalPresentationStyle = .fullScreen
+                        self.present(nextVC, animated: true)
+                    } else {
+                        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+                        let nextVC = storyboard.instantiateViewController(withIdentifier: "ResultsViewController")
+                        nextVC.modalPresentationStyle = .fullScreen
+                        self.present(nextVC, animated: true)
+                    }
                 }
             } catch {
                 self.alertTitle = "Oops"
@@ -135,6 +149,25 @@ class NFCStartViewController: UIViewController {
                 nextVC.modalPresentationStyle = .fullScreen
                 self.present(nextVC, animated: true)
             }
+        }
+    }
+    
+    func compareFaces() {
+        let instance = IdentyFaceFramework.init(with: bundlePath, localizablePath: Singleton.sharedInstance.languagePath(), table: "Main")
+        
+        var faceMatch : FaceMatcher!
+        let instat = FaceLocalMatch()
+        faceMatch = FaceLocalMatcher(instat.getLocalMatcher())
+        
+        instance.matchWithTemplate(viewcontrol: self, faceMatch: faceMatch, probeTemplateType: FaceAppTemplateFormat.png, probeTemplate: usDef.data(forKey: "foto")!, candidateTemplateType: FaceAppTemplateFormat.png, candidateTemplate: usDef.data(forKey: "selfie")!) { responseModel, transactionID, noOfAttempts in
+            let dict : Dictionary<String,Any> = (responseModel?.responseDictionary)!
+            let datadict :  Dictionary<String,Any> = dict["data"] as! Dictionary<String, Any>
+            let aux = datadict["similarity_score"]
+            UserDefaults.standard.set(aux, forKey: "score")
+        } onFailure: { error, transactionID, noOfAttempts in
+            print("Error: \(String(describing: error))")
+        } onAttempts: { responseAttempts in
+            
         }
     }
 }

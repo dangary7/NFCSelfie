@@ -34,22 +34,16 @@ class SelfieViewController: UIViewController {
     }
     
     @IBAction func startSelfie(_ sender: Any) {
-        compareFaceWithPath(bundlePath: bundlePath)
+        enrollFaceWithPath(bundlePath)
     }
     
-    func compareFaceWithPath(bundlePath: String) {
+    func enrollFaceWithPath(_ bundlePath: String) {
         let instance = IdentyFaceFramework.init(with: bundlePath, localizablePath: Singleton.sharedInstance.languagePath(), table: "Main")
-        instance.isNeedShowTraining = UserDefaults.standard.bool(forKey: FaceKeys.isNeedShowTraining)
-        instance.isAntiSpoofCheck = UserDefaults.standard.bool(forKey: FaceKeys.isAntiSpoof)//self.menuModelObj.isEnabledAS
-        instance.displayResult = true
+        instance.isNeedShowTraining = false
+        instance.isAntiSpoofCheck = UserDefaults.standard.bool(forKey: FaceKeys.isAntiSpoof)
+        instance.displayResult = false
         instance.isDemo = true
         instance.isAssistedMode = UserDefaults.standard.bool(forKey: FaceKeys.isAssistedMode)
-        
-        instance.plainSolidColor = plainSolidColor
-        instance.textBackgroundColor = textbackgroundColor
-        instance.startColor = startColor
-        instance.middleColor = middleColor
-        instance.endColor = endColor
         
         instance.templates.removeAll()
         instance.templates.append(.png)
@@ -59,26 +53,14 @@ class SelfieViewController: UIViewController {
         instance.isLogEnabled = true
         instance.isInitialize = true
         
-        instance.headerTextColor = .label
-        instance.standard_ui_okay = .clear
-        instance.standard_ui_not_okay = .clear
-        instance.textBackgroundColor = .systemBackground
-        instance.ui_msg_okay = .systemGray4
-        instance.ui_msg_not_okay = .systemGray4
-        
-        
-                
         var faceMatch : FaceMatcher!
         let instat = FaceLocalMatch()
         faceMatch = FaceLocalMatcher(instat.getLocalMatcher())
         
-        instance.verifyWithPictureID(viewcontrol: self, faceMatcher: faceMatch, imageData: UserDefaults.standard.data(forKey: "foto")!, templateType: FaceAppTemplateFormat.png) { responseModel, transactionID, noOfAttempts in
+        instance.enroll(viewcontrol: self, faceMatcher: faceMatch) { responseModel, transactionID, noOfAttempts in
             let dict : Dictionary<String,Any> = (responseModel?.responseDictionary)!
             let datadict :  Dictionary<String,Any> = dict["data"] as! Dictionary<String, Any>
             var keysArray : [String] = [String]()
-            
-            let matchResult = dict["verify_result"] as! [String : Bool]
-            UserDefaults.standard.set(matchResult["face"], forKey: "matchRostro")
             
             let aux = datadict["face"] as! [String : Any]
             let aux1 = aux["similarity_score"]
@@ -116,7 +98,7 @@ class SelfieViewController: UIViewController {
             //NAVEGAR
             UserDefaults.standard.set(false, forKey: "matchFailed")
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-            let nextvc = storyboard.instantiateViewController(withIdentifier: "ResultsViewController")
+            let nextvc = storyboard.instantiateViewController(withIdentifier: "SelfieCapturedViewController")
             nextvc.modalPresentationStyle = .fullScreen
             self.present(nextvc, animated: true)
         } onFailure: { response, error, transactionID, noOfAttempts in
@@ -154,17 +136,14 @@ class SelfieViewController: UIViewController {
                     DLog("Moved back", "")
                 }
             }
-            UserDefaults.standard.set(false, forKey: "matchRostro")
             //NAVEGAR
-            UserDefaults.standard.set(true, forKey: "matchFailed")
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-            let nextvc = storyboard.instantiateViewController(withIdentifier: "ResultsViewController")
+            let nextvc = storyboard.instantiateViewController(withIdentifier: "SelfieCapturedViewController")
             nextvc.modalPresentationStyle = .fullScreen
             self.present(nextvc, animated: true)
         } onAttempts: { responseAttempts in
             
         }
-        
     }
     
     func generateTemplates(filename:String, data:Data?, type:String, fileExtension:String){

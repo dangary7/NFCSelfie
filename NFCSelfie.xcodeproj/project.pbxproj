@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		710A8EE8291D75FC00D3E4E9 /* SelfieCapturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A8EE7291D75FC00D3E4E9 /* SelfieCapturedViewController.swift */; };
+		710A8EEA291D7CDB00D3E4E9 /* IncorrectFaceMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A8EE9291D7CDB00D3E4E9 /* IncorrectFaceMatchViewController.swift */; };
 		714118B829071C2800C956FB /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714118B729071C2800C956FB /* StringExt.swift */; };
 		714118BA29071C3F00C956FB /* FileManagerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714118B929071C3F00C956FB /* FileManagerExt.swift */; };
 		714118BC29071C6000C956FB /* UIAplicationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714118BB29071C6000C956FB /* UIAplicationExt.swift */; };
@@ -100,6 +102,8 @@
 
 /* Begin PBXFileReference section */
 		567CBF3DFEA54F302E6FA06E /* Pods-NFCSelfie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFCSelfie.debug.xcconfig"; path = "Target Support Files/Pods-NFCSelfie/Pods-NFCSelfie.debug.xcconfig"; sourceTree = "<group>"; };
+		710A8EE7291D75FC00D3E4E9 /* SelfieCapturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieCapturedViewController.swift; sourceTree = "<group>"; };
+		710A8EE9291D7CDB00D3E4E9 /* IncorrectFaceMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncorrectFaceMatchViewController.swift; sourceTree = "<group>"; };
 		714118B729071C2800C956FB /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		714118B929071C3F00C956FB /* FileManagerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExt.swift; sourceTree = "<group>"; };
 		714118BB29071C6000C956FB /* UIAplicationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAplicationExt.swift; sourceTree = "<group>"; };
@@ -336,6 +340,8 @@
 				71A818EA28F9CEA400CF0008 /* Singleton.swift */,
 				71A818EC28F9D2BA00CF0008 /* Constants.swift */,
 				715E98452915BAB400752252 /* ShowSelfieViewController.swift */,
+				710A8EE7291D75FC00D3E4E9 /* SelfieCapturedViewController.swift */,
+				710A8EE9291D7CDB00D3E4E9 /* IncorrectFaceMatchViewController.swift */,
 			);
 			path = Selfie;
 			sourceTree = "<group>";
@@ -472,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				710A8EE8291D75FC00D3E4E9 /* SelfieCapturedViewController.swift in Sources */,
 				7178CBBE2906FAFA00E558D0 /* ChipAuthenticationPublicKeyInfo.swift in Sources */,
 				71A818DF28F625F300CF0008 /* StartViewModel.swift in Sources */,
 				7178CB6A2900B9B800E558D0 /* NFCPassportModel.swift in Sources */,
@@ -510,6 +517,7 @@
 				71BEF47F2911E9AE00BE3B98 /* OCRResultsViewController.swift in Sources */,
 				7178CBBC2906FAFA00E558D0 /* DataGroup15.swift in Sources */,
 				7178CB932901BB8400E558D0 /* NFCDisplayMenuMessage.swift in Sources */,
+				710A8EEA291D7CDB00D3E4E9 /* IncorrectFaceMatchViewController.swift in Sources */,
 				7178CB602900672800E558D0 /* PassportSettings.swift in Sources */,
 				7178CBD02906FC0E00E558D0 /* SecureMessagingSessionKeyGenerator.swift in Sources */,
 				71BEF47429117FFD00BE3B98 /* ScanMRZViewController.swift in Sources */,
