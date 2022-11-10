@@ -12,12 +12,10 @@ class Utilities {
     
     func getMRZKey(passportNumber: String, dateOfBirth: String, dateOfExpiry: String ) -> String {
         
-        // Pad fields if necessary
         let pptNr = pad( passportNumber, fieldLength:9)
         let dob = pad( dateOfBirth, fieldLength:6)
         let exp = pad( dateOfExpiry, fieldLength:6)
         
-        // Calculate checksums
         let passportNrChksum = calcCheckSum(pptNr)
         let dateOfBirthChksum = calcCheckSum(dob)
         let expiryDateChksum = calcCheckSum(exp)
@@ -28,7 +26,6 @@ class Utilities {
     }
     
     func pad( _ value : String, fieldLength:Int ) -> String {
-        // Pad out field lengths with < if they are too short
         let paddedValue = (value + String(repeating: "<", count: fieldLength)).prefix(fieldLength)
         return String(paddedValue)
     }

@@ -7,7 +7,6 @@
 
 import Foundation
 
-/// Some Utility methods for string -  access characters by index
 extension String {
     subscript(_ i: Int) -> String {
         let idx1 = index(startIndex, offsetBy: i)

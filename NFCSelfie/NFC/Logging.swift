@@ -7,7 +7,6 @@
 
 import Foundation
 
-// TODO: Quick log functions - will move this to something better
 public enum LogLevel : Int, CaseIterable {
     case verbose = 0
     case debug = 1

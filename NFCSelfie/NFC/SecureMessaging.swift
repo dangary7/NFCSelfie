@@ -15,12 +15,6 @@ public enum SecureMessagingSupportedAlgorithms {
 #if !os(macOS)
 import CoreNFC
 
-
-/// This class implements the secure messaging protocol.
-/// The class is a new layer that comes between the reader and the iso7816.
-/// It gives a new transmit method that takes an APDU object formed by the iso7816 layer,
-/// ciphers it following the doc9303 specification, sends the ciphered APDU to the reader
-/// layer and returns the unciphered APDU.
 @available(iOS 13, *)
 public class SecureMessaging {
     private var ksenc : [UInt8]
@@ -37,7 +31,6 @@ public class SecureMessaging {
         self.padLength = algoName == .DES ? 8 : 16
     }
 
-    /// Protect the apdu following the doc9303 specification
     func protect(apdu : NFCISO7816APDU ) throws -> NFCISO7816APDU {
     
         Log.verbose("\t\tSSC: " + binToHexRep(self.ssc))
@@ -82,8 +75,6 @@ public class SecureMessaging {
         
         let do8e = self.buildD08E(mac: CC)
         
-        // If dataSize > 255 then it will be encoded in 3 bytes with the first byte being 0x00
-        // otherwise its a single byte of size
         let size = do87.count + do97.count + do8e.count
         var dataSize: [UInt8]
         if size > 255 {
@@ -94,8 +85,6 @@ public class SecureMessaging {
         var protectedAPDU = [UInt8](cmdHeader[0..<4]) + dataSize
         protectedAPDU += do87 + do97 + do8e
             
-        // If the data is more that 255, specify the we are using extended length (0x00, 0x00)
-        // Thanks to @filom for the fix!
         if size > 255 {
             protectedAPDU += [0x00,0x00]
         } else {
@@ -108,13 +97,11 @@ public class SecureMessaging {
         return newAPDU
     }
 
-    /// Unprotect the APDU following the iso7816 specification
     func unprotect(rapdu : ResponseAPDU ) throws -> ResponseAPDU {
         var needCC = false
         var do87 : [UInt8] = []
         var do87Data : [UInt8] = []
         var do99 : [UInt8] = []
-        //var do8e : [UInt8] = []
         var offset = 0
         
         self.ssc = self.incSSC()
@@ -122,7 +109,6 @@ public class SecureMessaging {
         Log.verbose("\tIncrement SSC with 1")
         Log.verbose("\t\tSSC: " + binToHexRep(self.ssc))
                 
-        // Check for a SM error
         if(rapdu.sw1 != 0x90 || rapdu.sw2 != 0x00) {
             return rapdu
         }
@@ -131,8 +117,6 @@ public class SecureMessaging {
         Log.verbose("Receive response APDU of MRTD's chip")
         Log.verbose("\tRAPDU: " + binToHexRep(rapduBin))
         
-        // DO'87'
-        // Mandatory if data is returned, otherwise absent
         if rapduBin[0] == 0x87 {
             let (encDataLength, o) = try asn1Length([UInt8](rapduBin[1...]))
             offset = 1 + o
@@ -147,8 +131,6 @@ public class SecureMessaging {
             needCC = true
         }
         
-        //DO'99'
-        // Mandatory, only absent if SM error occurs
         do99 = [UInt8](rapduBin[offset..<offset+4])
         let sw1 = rapduBin[offset+2]
         let sw2 = rapduBin[offset+3]
@@ -156,18 +138,12 @@ public class SecureMessaging {
         needCC = true
         
         if do99[0] != 0x99 && do99[1] != 0x02 {
-            //SM error, return the error code
             return ResponseAPDU(data: [], sw1: sw1, sw2: sw2)
         }
         
-        // DO'8E'
-        //Mandatory if DO'87' and/or DO'99' is present
         if rapduBin[offset] == 0x8E {
             let ccLength : Int = Int(binToHex(rapduBin[offset+1]))
             let CC = [UInt8](rapduBin[offset+2 ..< offset+2+ccLength])
-            // do8e = [UInt8](rapduBin[offset ..< offset+2+ccLength])
-            
-            // CheckCC
             var tmp = ""
             if do87.count > 0 {
                 tmp += " DO'87"
@@ -207,13 +183,11 @@ public class SecureMessaging {
             if algoName == .DES {
                 dec = tripleDESDecrypt(key: self.ksenc, message: do87Data, iv: [0,0,0,0,0,0,0,0])
             } else {
-                // for AES the IV is the ssc with AES/EBC/NOPADDING
                 let paddedssc = [UInt8](repeating: 0, count: 8) + ssc
                 let iv = AESECBEncrypt(key: ksenc, message: paddedssc)
                 dec = AESDecrypt(key: self.ksenc, message: do87Data, iv: iv)
             }
 
-            // There is a payload
             data = unpad(dec)
             Log.verbose("Decrypt data of DO'87 with KSenc")
             Log.verbose("\tDecryptedData: " + binToHexRep(data))
@@ -239,7 +213,6 @@ public class SecureMessaging {
     }
     
     func padAndEncryptData(_ apdu : NFCISO7816APDU) -> [UInt8] {
-        // Pad the data, encrypt data with KSenc and build DO'87
         let data = [UInt8](apdu.data!)
         let paddedData = pad( data, blockSize: padLength )
         
@@ -247,7 +220,6 @@ public class SecureMessaging {
         if algoName == .DES {
             enc = tripleDESEncrypt(key: self.ksenc, message: paddedData, iv: [0,0,0,0,0,0,0,0])
         } else {
-            // for AES the IV is the ssc with AES/EBC/NOPADDING
             let paddedssc = [UInt8](repeating: 0, count: 8) + ssc
             let iv = AESECBEncrypt(key: ksenc, message: paddedssc)
             enc = AESEncrypt(key: self.ksenc, message: paddedData, iv: iv)
@@ -262,9 +234,6 @@ public class SecureMessaging {
     
     func incSSC() -> [UInt8] {
         let val = binToHex(self.ssc) + 1
-        
-        // This needs to be fully zero padded - to 8 bytes = i.e. if SSC is 1 it should return [0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x1]
-        // NOT [0x1]
         return withUnsafeBytes(of: val.bigEndian, Array.init)
     }
     

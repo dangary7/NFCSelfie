@@ -185,7 +185,6 @@ class ScanMRZViewController: UIViewController {
         let usDef = UserDefaults.standard
         for textField in results.textResult.fields {
             guard let value = results.getTextFieldValueByType(fieldType: textField.fieldType, lcid: textField.lcid) else { continue }
-            //print("fieldName: \(textField.fieldName), value: \(value)")
             switch textField.fieldName {
             case "Given name":
                 usDef.setValue(value, forKey: "nombresOCR")

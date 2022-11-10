@@ -62,7 +62,6 @@ class ChipAuthenticationHandler {
                     break
                 }
             } catch {
-                // try next key
             }
         }
         
@@ -73,9 +72,6 @@ class ChipAuthenticationHandler {
     
     private func doChipAuthentication( with chipAuthPublicKeyInfo : ChipAuthenticationPublicKeyInfo ) async throws -> Bool {
         
-        // So it turns out that some passports don't have ChipAuthInfo items.
-        // So if we do have a ChipAuthInfo the we take the keyId (if present) and OID from there,
-        // BUT if we don't then we will try to infer the OID from the public key
         let keyId = chipAuthPublicKeyInfo.keyId
         let chipAuthInfoOID : String
         if let chipAuthInfo = chipAuthInfos[keyId ?? 0] {
@@ -92,8 +88,6 @@ class ChipAuthenticationHandler {
         return true
     }
     
-    /// Infer OID from public key type - Best guess seems to be to use 3DES_CBC_CBC for both ECDH and DH keys
-    /// Apparently works for French passports
     private func inferOID(fromPublicKeyOID: String ) -> String? {
         if fromPublicKeyOID == SecurityInfo.ID_PK_ECDH_OID {
             Log.warning("No ChipAuthenticationInfo - guessing its id-CA-ECDH-3DES-CBC-CBC");
@@ -109,24 +103,18 @@ class ChipAuthenticationHandler {
     
     private func doCA( keyId: Int?, encryptionDetailsOID oid: String, publicKey: OpaquePointer) async throws {
         
-        // Generate Ephemeral Keypair from parameters from DG14 Public key
-        // This should work for both EC and DH keys
         var ephemeralKeyPair : OpaquePointer? = nil
         let pctx = EVP_PKEY_CTX_new(publicKey, nil)
         EVP_PKEY_keygen_init(pctx)
         EVP_PKEY_keygen(pctx, &ephemeralKeyPair)
         EVP_PKEY_CTX_free(pctx)
         
-        // Send the public key to the passport
         try await sendPublicKey(oid: oid, keyId: keyId, pcdPublicKey: ephemeralKeyPair!)
             
         Log.debug( "Public Key successfully sent to passport!" )
         
-        // Use our ephemeral private key and the passports public key to generate a shared secret
-        // (the passport with do the same thing with their private key and our public key)
         let sharedSecret = OpenSSLUtils.computeSharedSecret(privateKeyPair:ephemeralKeyPair!, publicKey:publicKey)
         
-        // Now try to restart Secure Messaging using the new shared secret and
         try restartSecureMessaging( oid : oid, sharedSecret : sharedSecret, maxTranceiveLength : 1, shouldCheckMAC : true)
     }
     
@@ -157,11 +145,9 @@ class ChipAuthenticationHandler {
     
     private func handleGeneralAuthentication() async throws {
         repeat {
-            // Pull next segment from list
             let segment = gaSegments.removeFirst()
             let isLast = gaSegments.isEmpty
         
-            // send it
             _ = try await self.tagReader?.sendGeneralAuthenticate(data: segment, isLast: isLast)
         } while ( !gaSegments.isEmpty )
     }
@@ -170,7 +156,6 @@ class ChipAuthenticationHandler {
         let cipherAlg = try ChipAuthenticationInfo.toCipherAlgorithm(oid: oid)
         let keyLength = try ChipAuthenticationInfo.toKeyLength(oid: oid)
         
-        // Start secure messaging.
         let smskg = SecureMessagingSessionKeyGenerator()
         let ksEnc = try smskg.deriveKey(keySeed: sharedSecret, cipherAlgName: cipherAlg, keyLength: keyLength, mode: .ENC_MODE)
         let ksMac = try smskg.deriveKey(keySeed: sharedSecret, cipherAlgName: cipherAlg, keyLength: keyLength, mode: .MAC_MODE)
@@ -208,11 +193,6 @@ class ChipAuthenticationHandler {
         throw NFCPassportReaderError.InvalidDataPassed("Unsupported cipher algorithm or key length")
     }
     
-    /// Chunks up a byte array into a number of segments of the given size,
-    /// and a final segment if there is a remainder.
-    /// - Parameter segmentSize the number of bytes per segment
-    /// - Parameter data the data to be partitioned
-    /// - Parameter a list with the segments
     func chunk( data : [UInt8], segmentSize: Int ) -> [[UInt8]] {
         return stride(from: 0, to: data.count, by: segmentSize).map {
             Array(data[$0 ..< Swift.min($0 + segmentSize, data.count)])

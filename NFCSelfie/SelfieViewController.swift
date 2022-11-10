@@ -95,7 +95,6 @@ class SelfieViewController: UIViewController {
                     DLog("Moved back", "")
                 }
             }
-            //NAVEGAR
             UserDefaults.standard.set(false, forKey: "matchFailed")
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             let nextvc = storyboard.instantiateViewController(withIdentifier: "SelfieCapturedViewController")
@@ -136,7 +135,6 @@ class SelfieViewController: UIViewController {
                     DLog("Moved back", "")
                 }
             }
-            //NAVEGAR
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             let nextvc = storyboard.instantiateViewController(withIdentifier: "SelfieCapturedViewController")
             nextvc.modalPresentationStyle = .fullScreen

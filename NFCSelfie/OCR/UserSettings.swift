@@ -8,7 +8,6 @@
 import Foundation
 import DocumentReader
 
-// Helper class for holding settings
 class ApplicationSettings {
     static var shared: ApplicationSettings = ApplicationSettings()
     

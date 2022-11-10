@@ -66,16 +66,10 @@ class NFCStartViewController: UIViewController {
         let mrzKey = Utilities().getMRZKey( passportNumber: pptNr, dateOfBirth: dob, dateOfExpiry: doe)
         print(mrzKey)
 
-        // Set the masterListURL on the Passport Reader to allow auto passport verification
         let masterListURL = Bundle.main.url(forResource: "masterList", withExtension: ".pem")!
         passportReader.setMasterListURL( masterListURL )
         
-        // Set whether to use the new Passive Authentication verification method (default true) or the old OpenSSL CMS verifiction
         passportReader.passiveAuthenticationUsesOpenSSL = !settings.useNewVerificationMethod
-
-        // If we want to read only specific data groups we can using:
-//        let dataGroups : [DataGroupId] = [.COM, .SOD, .DG1, .DG2, .DG7, .DG11, .DG12, .DG14, .DG15]
-//        passportReader.readPassport(mrzKey: mrzKey, tags:dataGroups, completed: { (passport, error) in
         
         Log.logLevel = settings.logLevel
         Log.storeLogs = settings.shouldCaptureLogs
@@ -89,7 +83,6 @@ class NFCStartViewController: UIViewController {
                     case .requestPresentPassport:
                         return "Manten tu iPhone cerca de tu pasaporte."
                     default:
-                        // Return nil for all other messages so we use the provided default
                         return nil
                 }
             }
@@ -98,7 +91,6 @@ class NFCStartViewController: UIViewController {
                 let passport = try await passportReader.readPassport( mrzKey: mrzKey, customDisplayMessage:customMessageHandler)
                 
                 if settings.savePassportOnScan {
-                    // Save passport
                     let dict = passport.dumpPassportData(selectedDataGroups: DataGroupId.allCases, includeActiveAuthenticationData: true)
                     if let data = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted) {
                         
@@ -124,7 +116,6 @@ class NFCStartViewController: UIViewController {
                     usDef.set(valid, forKey: "pasaporteValido")
                     self.showDetails = true
                     
-                    //Llamar comparacion de rostros
                     self.compareFaces()
                     
                     if usDef.float(forKey: "score") < 50 {
