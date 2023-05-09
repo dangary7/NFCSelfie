@@ -21,30 +21,33 @@ extension NFCViewDisplayMessage {
     public var description: String {
         switch self {
             case .requestPresentPassport:
-                return "Manten tu iPhone cerca de tu pasaporte."
+                return NSLocalizedString("reques_present_passport", comment: "")
             case .authenticatingWithPassport(let progress):
                 let progressString = handleProgress(percentualProgress: progress)
-                return "Autenticando con pasaporte.....\n\n\(progressString)"
+                let temp = NSLocalizedString("authenticating_with_passport", comment: "")
+                return "\(temp)\n\n\(progressString)"
             case .readingDataGroupProgress(let dataGroup, let progress):
                 let progressString = handleProgress(percentualProgress: progress)
-                return "Leyendo \(dataGroup)...\n\n\(progressString)"
+                let temp = NSLocalizedString("reading_data_group_progress", comment: "")
+                return "\(temp) \(dataGroup)...\n\n\(progressString)"
             case .error(let tagError):
                 switch tagError {
                     case NFCPassportReaderError.TagNotValid:
-                        return "Tag no valido."
+                        return NSLocalizedString("tag_not_valid_error", comment: "")
                     case NFCPassportReaderError.MoreThanOneTagFound:
-                        return "Mas de 1 tag encontrado. Presenta unicamente 1 tag."
+                        return NSLocalizedString("more_than_one_tag_found_error", comment: "")
                     case NFCPassportReaderError.ConnectionError:
-                        return "Error de conexión. Intenta nuevamente."
+                        return NSLocalizedString("connection_error", comment: "")
                     case NFCPassportReaderError.InvalidMRZKey:
-                        return "Llave MRZ no válida para este documento."
+                        return NSLocalizedString("invalid_mrz_key_error", comment: "")
                     case NFCPassportReaderError.ResponseError(let description, let sw1, let sw2):
-                        return "Hubo un problema leyendo el pasaporte. \(description) - (0x\(sw1), 0x\(sw2)"
+                        let temp = NSLocalizedString("response_error", comment: "")
+                        return "\(temp). \(description) - (0x\(sw1), 0x\(sw2)"
                     default:
-                        return "Hubo un problema leyendo el pasaporte. Intenta nuevamente"
+                        return NSLocalizedString("generic_response_error", comment: "")
                 }
             case .successfulRead:
-                return "Pasaporte leído correctamente"
+                return NSLocalizedString("successful_read", comment: "")
         }
     }
     

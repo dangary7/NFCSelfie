@@ -12,6 +12,10 @@ import IdentyFaceLocal
 @available(iOS 15, *)
 class NFCStartViewController: UIViewController {
     
+    @IBOutlet weak var cvtitleLabel: UILabel!
+    @IBOutlet weak var passportCloserLabel: UILabel!
+    @IBOutlet weak var instructionsLabel: UILabel!
+    
     let bundlePath = Bundle.main.path(forResource: "1448-com.fad.bio-31-10-2022", ofType: "lic") ?? ""
     
     var settings = SettingsStore()
@@ -30,6 +34,7 @@ class NFCStartViewController: UIViewController {
     private var showingAlert = false
     
     override func viewDidLoad() {
+        setTexts()
         
         let dobForNFC = dateForNFC(usDef.string(forKey: "dobOCR") ?? "")
         let doeForNFC = dateForNFC(usDef.string(forKey: "doeOCR") ?? "")
@@ -40,6 +45,12 @@ class NFCStartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         scanPassport()
+    }
+    
+    func setTexts() {
+        cvtitleLabel.text = NSLocalizedString("nfc_vc_title", comment: "")
+        passportCloserLabel.text = NSLocalizedString("nfc_title", comment: "")
+        instructionsLabel.text = NSLocalizedString("nfc_passport_label", comment: "")
     }
     
     func dateForNFC(_ str: String) -> String {

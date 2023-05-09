@@ -9,7 +9,10 @@ import UIKit
 
 class SelfieCapturedViewController: UIViewController {
     
+    @IBOutlet weak var sucCaptureLabel: UILabel!
+    
     override func viewDidLoad() {
+        sucCaptureLabel.text = NSLocalizedString("success_face_capture_label", comment: "")
         delay()
     }
     

@@ -20,26 +20,48 @@ class ResultsViewController : UIViewController {
     @IBOutlet weak var nivelSimilitud: UILabel!
     @IBOutlet weak var indicatorView: UIView!
     @IBOutlet weak var indicatorLabel: UILabel!
-    @IBOutlet weak var scoreView: UIView!
-
+    @IBOutlet weak var namesLabel: UILabel!
+    @IBOutlet weak var familyNamesLabel: UILabel!
+    @IBOutlet weak var dateOfBirthLabel: UILabel!
+    @IBOutlet weak var passportNumberLabel: UILabel!
     
     var passport = NFCPassportModel()
     
     let usDef = UserDefaults.standard
     
     override func viewDidLoad() {
+        setTexts()
+        
         nombre.text = usDef.string(forKey: "nombre")
         primerApellido.text = usDef.string(forKey: "apellido")
         noPasaporte.text = usDef.string(forKey: "numeroPasaporte")
         fechaNacimiento.text = usDef.string(forKey: "dobOCR")
         NFCImage.image = UIImage(data: usDef.data(forKey: "foto")!)
         selfieImage.image = UIImage(data: usDef.data(forKey: "selfie")!)
-        nivelSimilitud.text = "\(usDef.float(forKey: "score"))% de similitud"
         
-        if usDef.float(forKey: "score") < 50 {
+        /*if usDef.float(forKey: "score") < 50 {
             indicatorView.backgroundColor = UIColor.red
             indicatorLabel.text = "Validación no exitosa"
+        }*/
+    }
+    
+    func setTexts() {
+        if usDef.float(forKey: "score") < 50 {
+            indicatorView.backgroundColor = UIColor.red
+            indicatorLabel.text = NSLocalizedString("validation_fail_title", comment: "")
+        } else {
+            indicatorLabel.text = NSLocalizedString("validation_succes_title", comment: "")
         }
+        
+        namesLabel.text = NSLocalizedString("given_names_label", comment: "")
+        familyNamesLabel.text = NSLocalizedString("surname_label", comment: "")
+        dateOfBirthLabel.text = NSLocalizedString("birth_day_label", comment: "")
+        passportNumberLabel.text = NSLocalizedString("passport_number_label", comment: "")
+        
+        //let temp: String = "\(usDef.float(forKey: "score"))" + NSLocalizedString("similarity_found_label", comment: "")
+        let temp = "\(usDef.float(forKey: "score"))% " + String(format: NSLocalizedString("similarity_found_label", comment: ""), "")
+        
+        nivelSimilitud.text = temp
     }
     
     @IBAction func goHomeVC(_ sender: Any) {

@@ -9,7 +9,10 @@ import UIKit
 
 class IncorrectFaceMatchViewController: UIViewController {
     
+    @IBOutlet weak var incorrectFaceValidationLabel: UILabel!
+    
     override func viewDidLoad() {
+        incorrectFaceValidationLabel.text = NSLocalizedString("failed_facial_verification_label", comment: "")
         delay()
     }
     

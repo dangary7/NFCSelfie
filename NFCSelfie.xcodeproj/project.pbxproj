@@ -12,6 +12,7 @@
 		714118B829071C2800C956FB /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714118B729071C2800C956FB /* StringExt.swift */; };
 		714118BA29071C3F00C956FB /* FileManagerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714118B929071C3F00C956FB /* FileManagerExt.swift */; };
 		714118BC29071C6000C956FB /* UIAplicationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714118BB29071C6000C956FB /* UIAplicationExt.swift */; };
+		7142BE8D2A018CEB00272AEE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7142BE8F2A018CEB00272AEE /* Localizable.strings */; };
 		715E98462915BAB400752252 /* ShowSelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715E98452915BAB400752252 /* ShowSelfieViewController.swift */; };
 		7178CB602900672800E558D0 /* PassportSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178CB5F2900672800E558D0 /* PassportSettings.swift */; };
 		7178CB6A2900B9B800E558D0 /* NFCPassportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178CB692900B9B800E558D0 /* NFCPassportModel.swift */; };
@@ -68,6 +69,10 @@
 		71A818ED28F9D2BA00CF0008 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A818EC28F9D2BA00CF0008 /* Constants.swift */; };
 		71A818F128F9D5E600CF0008 /* 1448-com.fad.bio-31-10-2022.lic in Resources */ = {isa = PBXBuildFile; fileRef = 71A818F028F9D5E600CF0008 /* 1448-com.fad.bio-31-10-2022.lic */; };
 		71A818F328FDB20800CF0008 /* NFCUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A818F228FDB20800CF0008 /* NFCUtilities.swift */; };
+		71B3DF3C2A032765006DDF27 /* ProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3DF3B2A032765006DDF27 /* ProcessingViewController.swift */; };
+		71B3DF3E2A032E6B006DDF27 /* InvalidPassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3DF3D2A032E6B006DDF27 /* InvalidPassportViewController.swift */; };
+		71B3DF402A032E7A006DDF27 /* NoChipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3DF3F2A032E7A006DDF27 /* NoChipViewController.swift */; };
+		71B3DF422A032E91006DDF27 /* NoSupportedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3DF412A032E91006DDF27 /* NoSupportedViewController.swift */; };
 		71BEF4692910AFF200BE3B98 /* RegulaCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BEF4682910AFF200BE3B98 /* RegulaCommon.xcframework */; };
 		71BEF46A2910AFF200BE3B98 /* RegulaCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71BEF4682910AFF200BE3B98 /* RegulaCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		71BEF46D2910AFF600BE3B98 /* DocumentReaderCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BEF46C2910AFF600BE3B98 /* DocumentReaderCore.xcframework */; };
@@ -107,6 +112,13 @@
 		714118B729071C2800C956FB /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		714118B929071C3F00C956FB /* FileManagerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExt.swift; sourceTree = "<group>"; };
 		714118BB29071C6000C956FB /* UIAplicationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAplicationExt.swift; sourceTree = "<group>"; };
+		7142BE8E2A018CEB00272AEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7142BE902A018CF400272AEE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		7142BE912A018CF400272AEE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7142BE922A018CF500272AEE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		7142BE932A018CFC00272AEE /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
+		7142BE942A018CFC00272AEE /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7142BE952A018CFD00272AEE /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		715E98452915BAB400752252 /* ShowSelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSelfieViewController.swift; sourceTree = "<group>"; };
 		7178CB5F2900672800E558D0 /* PassportSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportSettings.swift; sourceTree = "<group>"; };
 		7178CB692900B9B800E558D0 /* NFCPassportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCPassportModel.swift; sourceTree = "<group>"; };
@@ -166,6 +178,11 @@
 		71A818EC28F9D2BA00CF0008 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		71A818F028F9D5E600CF0008 /* 1448-com.fad.bio-31-10-2022.lic */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1448-com.fad.bio-31-10-2022.lic"; sourceTree = "<group>"; };
 		71A818F228FDB20800CF0008 /* NFCUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCUtilities.swift; sourceTree = "<group>"; };
+		71B3DF3A2A01E091006DDF27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		71B3DF3B2A032765006DDF27 /* ProcessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingViewController.swift; sourceTree = "<group>"; };
+		71B3DF3D2A032E6B006DDF27 /* InvalidPassportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidPassportViewController.swift; sourceTree = "<group>"; };
+		71B3DF3F2A032E7A006DDF27 /* NoChipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoChipViewController.swift; sourceTree = "<group>"; };
+		71B3DF412A032E91006DDF27 /* NoSupportedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSupportedViewController.swift; sourceTree = "<group>"; };
 		71BEF4682910AFF200BE3B98 /* RegulaCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RegulaCommon.xcframework; path = ../../../RegulaFrameworks/RegulaCommon.xcframework; sourceTree = "<group>"; };
 		71BEF46C2910AFF600BE3B98 /* DocumentReaderCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DocumentReaderCore.xcframework; path = ../../../RegulaFrameworks/DocumentReaderCore.xcframework; sourceTree = "<group>"; };
 		71BEF46F2910B00700BE3B98 /* DocumentReader.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DocumentReader.xcframework; path = ../../../RegulaFrameworks/DocumentReader.xcframework; sourceTree = "<group>"; };
@@ -297,6 +314,7 @@
 				71A818CD28F6120200CF0008 /* LaunchScreen.storyboard */,
 				71A818D028F6120200CF0008 /* Info.plist */,
 				7178CBD9290701A400E558D0 /* masterList.pem */,
+				7142BE8F2A018CEB00272AEE /* Localizable.strings */,
 			);
 			path = NFCSelfie;
 			sourceTree = "<group>";
@@ -329,6 +347,10 @@
 				714118B629071C1800C956FB /* Extensiones */,
 				7178CB942901D06800E558D0 /* DataGroups */,
 				71C407212919C35500A3FDF2 /* WrongPassportViewController.swift */,
+				71B3DF3B2A032765006DDF27 /* ProcessingViewController.swift */,
+				71B3DF3D2A032E6B006DDF27 /* InvalidPassportViewController.swift */,
+				71B3DF3F2A032E7A006DDF27 /* NoChipViewController.swift */,
+				71B3DF412A032E91006DDF27 /* NoSupportedViewController.swift */,
 			);
 			path = NFC;
 			sourceTree = "<group>";
@@ -403,6 +425,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
+				"es-419",
 			);
 			mainGroup = 71A818B628F6120100CF0008;
 			productRefGroup = 71A818C028F6120100CF0008 /* Products */;
@@ -424,6 +448,7 @@
 				71A818F128F9D5E600CF0008 /* 1448-com.fad.bio-31-10-2022.lic in Resources */,
 				71A818CF28F6120200CF0008 /* LaunchScreen.storyboard in Resources */,
 				71A818CC28F6120200CF0008 /* Assets.xcassets in Resources */,
+				7142BE8D2A018CEB00272AEE /* Localizable.strings in Resources */,
 				71A818CA28F6120100CF0008 /* Main.storyboard in Resources */,
 				71A818E528F7371B00CF0008 /* NFC.storyboard in Resources */,
 			);
@@ -490,6 +515,7 @@
 				7178CB9C2901D31300E558D0 /* DataGroup.swift in Sources */,
 				7178CBCE2906FB8400E558D0 /* PACEHandler.swift in Sources */,
 				7178CBC82906FAFA00E558D0 /* DataGroup12.swift in Sources */,
+				71B3DF422A032E91006DDF27 /* NoSupportedViewController.swift in Sources */,
 				7178CBD22906FC8700E558D0 /* SecureMessaging.swift in Sources */,
 				7178CBC72906FAFA00E558D0 /* CardAccess.swift in Sources */,
 				71A818D928F61C1D00CF0008 /* SelfieViewController.swift in Sources */,
@@ -505,6 +531,7 @@
 				7178CBC22906FAFA00E558D0 /* COM.swift in Sources */,
 				7178CB9A2901D23E00E558D0 /* Logging.swift in Sources */,
 				7178CBAA2906FA4300E558D0 /* BACHandler.swift in Sources */,
+				71B3DF3C2A032765006DDF27 /* ProcessingViewController.swift in Sources */,
 				7178CBC32906FAFA00E558D0 /* DataGroup11.swift in Sources */,
 				7178CBC02906FAFA00E558D0 /* PACEInfo.swift in Sources */,
 				7178CBCC2906FB5600E558D0 /* ChipAuthenticationHandler.swift in Sources */,
@@ -520,6 +547,7 @@
 				710A8EEA291D7CDB00D3E4E9 /* IncorrectFaceMatchViewController.swift in Sources */,
 				7178CB602900672800E558D0 /* PassportSettings.swift in Sources */,
 				7178CBD02906FC0E00E558D0 /* SecureMessagingSessionKeyGenerator.swift in Sources */,
+				71B3DF3E2A032E6B006DDF27 /* InvalidPassportViewController.swift in Sources */,
 				71BEF47429117FFD00BE3B98 /* ScanMRZViewController.swift in Sources */,
 				7178CBC42906FAFA00E558D0 /* SecurityInfo.swift in Sources */,
 				71A818C328F6120100CF0008 /* AppDelegate.swift in Sources */,
@@ -529,6 +557,7 @@
 				71A818C528F6120100CF0008 /* SceneDelegate.swift in Sources */,
 				71A818DB28F61C2B00CF0008 /* NFCViewController.swift in Sources */,
 				71BEF4772911807300BE3B98 /* DocumentReaderService.swift in Sources */,
+				71B3DF402A032E7A006DDF27 /* NoChipViewController.swift in Sources */,
 				714118BA29071C3F00C956FB /* FileManagerExt.swift in Sources */,
 				71A818DD28F61C3800CF0008 /* ResultsViewController.swift in Sources */,
 				714118B829071C2800C956FB /* StringExt.swift in Sources */,
@@ -545,10 +574,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		7142BE8F2A018CEB00272AEE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7142BE8E2A018CEB00272AEE /* en */,
+				7142BE922A018CF500272AEE /* pt-BR */,
+				7142BE952A018CFD00272AEE /* es-419 */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		71A818C828F6120100CF0008 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				71A818C928F6120100CF0008 /* Base */,
+				7142BE902A018CF400272AEE /* pt-BR */,
+				7142BE932A018CFC00272AEE /* es-419 */,
+				71B3DF3A2A01E091006DDF27 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -557,6 +599,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				71A818CE28F6120200CF0008 /* Base */,
+				7142BE912A018CF400272AEE /* pt-BR */,
+				7142BE942A018CFC00272AEE /* es-419 */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -568,6 +612,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -628,6 +673,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

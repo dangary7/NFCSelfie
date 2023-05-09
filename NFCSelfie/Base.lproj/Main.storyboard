@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8gV-aB-qHw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8gV-aB-qHw">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -77,7 +77,7 @@
                                     <constraint firstAttribute="height" constant="50" id="vpx-tJ-WvX"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Continuar">
+                                <buttonConfiguration key="configuration" style="filled">
                                     <color key="baseBackgroundColor" red="0.65490196078431373" green="0.023529411764705882" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -138,8 +138,13 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="s6j-45-ph7" id="Haa-Gt-DcE"/>
+                        <outlet property="continueButton" destination="NVU-ey-9Lq" id="xNk-yM-fcm"/>
+                        <outlet property="instructionsLabel" destination="MQG-Pr-Zkb" id="A7H-zB-WNy"/>
                         <outlet property="loaderContainer" destination="zp8-5P-CBw" id="XaV-Sj-yFD"/>
+                        <outlet property="passportLabel" destination="VQh-uM-tOg" id="ac0-0W-TH8"/>
+                        <outlet property="recomendationsLabel" destination="U6Z-es-DiG" id="8G3-Jc-RO4"/>
                         <outlet property="statusLabel" destination="4Jg-56-aQP" id="9bG-4N-5hu"/>
+                        <outlet property="vcTitle" destination="tcy-wQ-kEQ" id="XFb-Sx-3s4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pBW-xx-DFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -155,7 +160,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biometría facial 2/3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b33-yb-BQx">
-                                <rect key="frame" x="120" y="68" width="150" height="21"/>
+                                <rect key="frame" x="100" y="68" width="190" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -218,7 +223,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Hwq-Gu-bIQ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Continuar">
+                                <buttonConfiguration key="configuration" style="filled">
                                     <color key="baseBackgroundColor" red="0.65490196079999996" green="0.023529411760000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -242,13 +247,20 @@
                             <constraint firstItem="k2Z-ml-k73" firstAttribute="leading" secondItem="G9A-0S-SvU" secondAttribute="leading" constant="15" id="XCN-nh-1qI"/>
                             <constraint firstItem="G9A-0S-SvU" firstAttribute="trailing" secondItem="oDw-dL-4Qb" secondAttribute="trailing" constant="77" id="ZvM-Z8-XoC"/>
                             <constraint firstItem="G9A-0S-SvU" firstAttribute="trailing" secondItem="Uhz-jr-ohk" secondAttribute="trailing" constant="15" id="Zwc-Dx-uxo"/>
-                            <constraint firstItem="b33-yb-BQx" firstAttribute="leading" secondItem="G9A-0S-SvU" secondAttribute="leading" constant="120" id="aeB-J0-EbT"/>
-                            <constraint firstItem="G9A-0S-SvU" firstAttribute="trailing" secondItem="b33-yb-BQx" secondAttribute="trailing" constant="120" id="iSR-aS-oci"/>
+                            <constraint firstItem="b33-yb-BQx" firstAttribute="leading" secondItem="G9A-0S-SvU" secondAttribute="leading" constant="100" id="aeB-J0-EbT"/>
+                            <constraint firstItem="G9A-0S-SvU" firstAttribute="trailing" secondItem="b33-yb-BQx" secondAttribute="trailing" constant="100" id="iSR-aS-oci"/>
                             <constraint firstItem="cxn-JN-d5H" firstAttribute="top" secondItem="mJG-Bs-o2J" secondAttribute="bottom" constant="24" id="nUw-eT-HZI"/>
                             <constraint firstItem="k2Z-ml-k73" firstAttribute="top" secondItem="Uhz-jr-ohk" secondAttribute="bottom" constant="6" id="omS-Uc-4dR"/>
                             <constraint firstItem="Uhz-jr-ohk" firstAttribute="top" secondItem="oDw-dL-4Qb" secondAttribute="bottom" constant="74" id="yWf-Lc-QDB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="continueButton" destination="cxn-JN-d5H" id="fFk-1Z-BDH"/>
+                        <outlet property="faceBiomLabel" destination="Uhz-jr-ohk" id="dbK-ug-yZW"/>
+                        <outlet property="focusFaceLabel" destination="k2Z-ml-k73" id="qAe-qa-gTX"/>
+                        <outlet property="instructionsLabel" destination="EhF-JL-6mr" id="aG4-yP-hVU"/>
+                        <outlet property="vcTitleLabel" destination="b33-yb-BQx" id="nMk-6T-wkd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MhV-Ge-Jah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,15 +316,20 @@
                             <constraint firstItem="izq-d7-EmC" firstAttribute="top" secondItem="YIG-dp-jQy" secondAttribute="bottom" constant="6" id="rBK-2K-Qmm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cvtitleLabel" destination="StH-ck-0rA" id="vfb-M9-fKg"/>
+                        <outlet property="instructionsLabel" destination="izq-d7-EmC" id="A9m-gM-f31"/>
+                        <outlet property="passportCloserLabel" destination="YIG-dp-jQy" id="SHb-q0-CQD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7B-hE-dLq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1005" y="322"/>
         </scene>
-        <!--View Controller-->
+        <!--Invalid Passport View Controller-->
         <scene sceneID="Wod-Le-z0t">
             <objects>
-                <viewController id="z7l-wF-0Rd" sceneMemberID="viewController">
+                <viewController id="z7l-wF-0Rd" customClass="InvalidPassportViewController" customModule="NFCSelfie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dyr-Op-hVw">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,10 +358,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6U-30-M7n">
-                                <rect key="frame" x="22.666666666666657" y="695" width="345" height="50"/>
+                                <rect key="frame" x="121.33333333333333" y="695" width="147.66666666666669" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0qk-Do-WxG"/>
-                                    <constraint firstAttribute="width" constant="345" id="172-nJ-sFq"/>
                                 </constraints>
                                 <color key="tintColor" red="0.65490196079999996" green="0.023529411760000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
@@ -364,15 +380,20 @@
                             <constraint firstItem="I6U-30-M7n" firstAttribute="top" secondItem="fCJ-0u-SPO" secondAttribute="bottom" constant="332" id="TVA-p4-sKC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="uO4-LQ-c8a" id="Zu0-8I-B2C"/>
+                        <outlet property="invalidPassportLabel" destination="h4B-Yk-Kxm" id="WRy-zB-tW9"/>
+                        <outlet property="tryAgainButton" destination="I6U-30-M7n" id="Woz-yx-BKJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8y-uu-P7M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1005" y="1182"/>
         </scene>
-        <!--View Controller-->
+        <!--Processing View Controller-->
         <scene sceneID="CVa-wf-DQK">
             <objects>
-                <viewController id="MHs-Ol-vsZ" sceneMemberID="viewController">
+                <viewController id="MHs-Ol-vsZ" customClass="ProcessingViewController" customModule="NFCSelfie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9ox-Yk-ILQ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -399,6 +420,10 @@
                             <constraint firstItem="r2j-6W-kk9" firstAttribute="centerX" secondItem="P5R-qh-OBV" secondAttribute="centerX" id="k2k-az-T8C"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="processingTitleLabel" destination="Cz4-Mv-1SA" id="yTK-W7-iuU"/>
+                        <outlet property="waitLabel" destination="r2j-6W-kk9" id="EGd-rE-f8b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsP-CF-Vg1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -494,8 +519,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fc-bi-5sP">
-                                <rect key="frame" x="57.000000000000007" y="518" width="66.666666666666686" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido(s):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fc-bi-5sP">
+                                <rect key="frame" x="57" y="518" width="83" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -519,7 +544,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwh-Nh-ifx">
-                                <rect key="frame" x="128.66666666666666" y="518" width="37" height="18"/>
+                                <rect key="frame" x="145" y="518" width="37" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -582,14 +607,17 @@
                     </view>
                     <connections>
                         <outlet property="NFCImage" destination="f7K-92-nBn" id="diD-pR-Syb"/>
+                        <outlet property="dateOfBirthLabel" destination="CMf-Fx-gqn" id="CA5-WX-ClK"/>
+                        <outlet property="familyNamesLabel" destination="8Fc-bi-5sP" id="FIa-gl-RlM"/>
                         <outlet property="fechaNacimiento" destination="mK7-Qi-ZSX" id="WEM-ls-kNI"/>
                         <outlet property="indicatorLabel" destination="fnp-G7-gIW" id="d0Y-ub-are"/>
                         <outlet property="indicatorView" destination="FZC-Y9-vY1" id="hx8-Yb-Edz"/>
+                        <outlet property="namesLabel" destination="SCb-oJ-pip" id="dKb-LH-DaH"/>
                         <outlet property="nivelSimilitud" destination="JBq-uw-GMd" id="zcz-8l-hga"/>
                         <outlet property="noPasaporte" destination="IEc-OY-vkH" id="A4c-lI-uhm"/>
                         <outlet property="nombre" destination="kKA-LX-SPK" id="OvB-HX-4De"/>
+                        <outlet property="passportNumberLabel" destination="IcD-Qs-IIL" id="aay-d2-Xl0"/>
                         <outlet property="primerApellido" destination="iwh-Nh-ifx" id="M6X-Lp-aAT"/>
-                        <outlet property="scoreView" destination="u3i-kj-cJR" id="Xch-KN-Joj"/>
                         <outlet property="selfieImage" destination="DVo-0Z-Vf8" id="019-vq-bAd"/>
                     </connections>
                 </viewController>
@@ -631,6 +659,9 @@
                             <constraint firstItem="Nct-mW-Jwc" firstAttribute="centerX" secondItem="AmE-cW-Bje" secondAttribute="centerX" id="scR-B9-8nH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sucCaptureLabel" destination="Nct-mW-Jwc" id="kv8-Ja-Ccf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lte-2S-N9Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -673,7 +704,7 @@
                                     <constraint firstAttribute="width" constant="345" id="xpD-ZO-yca"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Si, continuar">
+                                <buttonConfiguration key="configuration" style="filled">
                                     <color key="baseBackgroundColor" red="0.65490196079999996" green="0.023529411760000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -681,10 +712,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiK-Zw-CLq">
-                                <rect key="frame" x="110.66666666666669" y="723.66666666666663" width="169" height="35"/>
+                                <rect key="frame" x="183" y="723.66666666666663" width="24" height="14"/>
                                 <color key="tintColor" red="0.65490196079999996" green="0.023529411760000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Volver a tomar foto"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
                                     <action selector="tomarOtraFoto:" destination="Se8-vE-jzM" eventType="touchUpInside" id="YuD-KH-6ah"/>
                                 </connections>
@@ -706,7 +737,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="continueButton" destination="ULC-xq-hL7" id="3NU-WB-ArC"/>
+                        <outlet property="correctPictureLabel" destination="j6P-Xe-dhW" id="5y3-TI-JjI"/>
+                        <outlet property="retakePictureButton" destination="SiK-Zw-CLq" id="MFL-si-0PD"/>
                         <outlet property="selfieImage" destination="RD6-pO-jip" id="dBR-1u-pP7"/>
+                        <outlet property="vcTitle" destination="vuU-UU-k8l" id="TT7-QL-t9L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7a-1D-JbQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -745,7 +780,7 @@
                                     <constraint firstAttribute="height" constant="55" id="Hpy-mG-Jzv"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Continuar">
+                                <buttonConfiguration key="configuration" style="filled">
                                     <color key="baseBackgroundColor" red="0.65490196078431373" green="0.023529411764705882" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -753,10 +788,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywl-zo-NhB">
-                                <rect key="frame" x="102.33333333333333" y="730.66666666666663" width="185.66666666666669" height="35"/>
+                                <rect key="frame" x="183" y="730.66666666666663" width="24" height="14"/>
                                 <color key="tintColor" red="0.65490196079999996" green="0.023529411760000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Volver a tomar la foto"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
                                     <action selector="tomarOtraFoto:" destination="n97-Xw-uDw" eventType="touchUpInside" id="3pS-37-Q1J"/>
                                 </connections>
@@ -783,7 +818,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="continueButton" destination="M3l-jC-dwQ" id="zmU-Bs-s0i"/>
+                        <outlet property="correctPictureLabel" destination="Xoh-wk-P7M" id="hgG-H2-qdk"/>
                         <outlet property="passImage" destination="I2h-Lo-rkO" id="w5j-Jy-rCR"/>
+                        <outlet property="retakePictureButton" destination="Ywl-zo-NhB" id="RLY-Oi-ZBD"/>
+                        <outlet property="reviewDataLabel" destination="arH-Ys-ZpS" id="UOw-hJ-ZKg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWe-8S-KrL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -835,9 +874,9 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu3-iK-9Ap">
-                                <rect key="frame" x="25" y="239" width="82" height="17"/>
+                                <rect key="frame" x="25" y="239" width="200" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="82" id="bis-Si-GOO"/>
+                                    <constraint firstAttribute="width" constant="200" id="bis-Si-GOO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
@@ -852,9 +891,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp3-NC-cBA">
-                                <rect key="frame" x="25" y="328" width="80" height="17.333333333333314"/>
+                                <rect key="frame" x="25" y="328" width="200" height="17.333333333333314"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="6iD-zX-q74"/>
+                                    <constraint firstAttribute="width" constant="200" id="6iD-zX-q74"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -869,9 +908,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de nacimiento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtQ-FB-jTR">
-                                <rect key="frame" x="25" y="417.33333333333331" width="150" height="17"/>
+                                <rect key="frame" x="25" y="417.33333333333331" width="200" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="xPR-5R-fFY"/>
+                                    <constraint firstAttribute="width" constant="200" id="xPR-5R-fFY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -886,9 +925,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. de pasaporte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOb-j6-F5p">
-                                <rect key="frame" x="25" y="506.33333333333331" width="150" height="16.333333333333314"/>
+                                <rect key="frame" x="25" y="506.33333333333331" width="200" height="16.333333333333314"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="6vi-2I-eJs"/>
+                                    <constraint firstAttribute="width" constant="200" id="6vi-2I-eJs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -908,7 +947,7 @@
                                     <constraint firstAttribute="height" constant="50" id="fpM-8E-WfK"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Validar pasaporte">
+                                <buttonConfiguration key="configuration" style="filled">
                                     <color key="baseBackgroundColor" red="0.65490196079999996" green="0.023529411760000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -949,19 +988,27 @@
                     </view>
                     <connections>
                         <outlet property="apellidosTextField" destination="H34-1d-a2C" id="zfj-bt-DFB"/>
+                        <outlet property="dateOfBirthLabel" destination="GtQ-FB-jTR" id="Lxy-zS-gUH"/>
                         <outlet property="dobTextField" destination="zxH-uV-FMd" id="rkv-s5-k9T"/>
+                        <outlet property="familyNamesLabel" destination="Bp3-NC-cBA" id="Uln-b2-uC8"/>
+                        <outlet property="namesLabel" destination="cu3-iK-9Ap" id="T02-VW-bEG"/>
                         <outlet property="nombresTextField" destination="PYE-h7-hKz" id="tcg-tH-144"/>
                         <outlet property="pasaporteTextField" destination="QWR-ml-IEQ" id="olo-MD-PSl"/>
+                        <outlet property="passportNumberLabel" destination="WOb-j6-F5p" id="Xsh-4h-O5X"/>
+                        <outlet property="passportTitleLabel" destination="EFf-eH-f6e" id="CgQ-qZ-aCu"/>
+                        <outlet property="validateButton" destination="rkf-Af-GpW" id="giO-gq-mYt"/>
+                        <outlet property="validateDataLabel" destination="sEa-13-i50" id="3VE-X3-OUS"/>
+                        <outlet property="vcTitleLabel" destination="Sk8-xp-6av" id="ivR-Id-Be4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPh-tk-jil" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3095" y="-1312"/>
         </scene>
-        <!--View Controller-->
+        <!--No Chip View Controller-->
         <scene sceneID="pNl-fG-BgZ">
             <objects>
-                <viewController id="Xsk-1R-SIS" sceneMemberID="viewController">
+                <viewController id="Xsk-1R-SIS" customClass="NoChipViewController" customModule="NFCSelfie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s6T-pD-dJj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -990,9 +1037,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knY-8n-Vk1">
-                                <rect key="frame" x="22.666666666666657" y="695" width="345" height="50"/>
+                                <rect key="frame" x="121.33333333333333" y="695" width="147.66666666666669" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="345" id="TRw-yb-dQp"/>
                                     <constraint firstAttribute="height" constant="50" id="aiW-M4-Jcg"/>
                                 </constraints>
                                 <color key="tintColor" red="0.65490196079999996" green="0.023529411760000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1013,6 +1059,11 @@
                             <constraint firstItem="wdp-dO-hzp" firstAttribute="centerX" secondItem="ftx-9z-iIQ" secondAttribute="centerX" id="ywb-b8-ikG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="xNw-cv-X2o" id="2rr-92-I4p"/>
+                        <outlet property="noChipTitleLabel" destination="wdp-dO-hzp" id="dV4-rg-eN6"/>
+                        <outlet property="tryAgainButton" destination="knY-8n-Vk1" id="ZMM-ny-RxW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81V-FO-G5p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1077,15 +1128,20 @@
                             <constraint firstItem="itb-ki-D51" firstAttribute="top" secondItem="rsA-mc-fk2" secondAttribute="bottom" constant="332" id="tNF-Sb-FsY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="QBs-a5-hHm" id="wJi-8M-C4r"/>
+                        <outlet property="tryAgainButton" destination="itb-ki-D51" id="zHi-k2-4dY"/>
+                        <outlet property="wrongPassportLabel" destination="VDQ-cA-ekX" id="WBi-I6-AxA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHK-bE-3J0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3094" y="1182"/>
         </scene>
-        <!--View Controller-->
+        <!--No Supported View Controller-->
         <scene sceneID="Yih-45-syR">
             <objects>
-                <viewController id="r3C-VU-jdG" sceneMemberID="viewController">
+                <viewController id="r3C-VU-jdG" customClass="NoSupportedViewController" customModule="NFCSelfie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qSr-J7-nLX">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1113,9 +1169,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMt-rJ-uwV">
-                                <rect key="frame" x="75" y="545" width="240" height="34"/>
+                                <rect key="frame" x="79" y="545" width="232" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="eTo-nt-s8a"/>
                                     <constraint firstAttribute="height" constant="34" id="pgb-Cu-8sU"/>
                                 </constraints>
                                 <color key="tintColor" red="0.65490196079999996" green="0.023529411760000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1136,6 +1191,11 @@
                             <constraint firstItem="CMt-rJ-uwV" firstAttribute="centerX" secondItem="Ney-Jh-1cT" secondAttribute="centerX" id="oW2-Id-yZL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="Q8I-aV-7eM" id="qSx-VB-Dva"/>
+                        <outlet property="noSupportedTitleLabel" destination="tXk-0f-F8W" id="beu-VT-Xqw"/>
+                        <outlet property="tryDifferentPassportButton" destination="CMt-rJ-uwV" id="3MD-9D-NSh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o54-5a-Nbn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1156,13 +1216,19 @@
                                     <constraint firstAttribute="width" constant="59" id="fsB-hn-sh0"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Validación facial incorrecta" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDy-vf-v7l">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDy-vf-v7l">
                                 <rect key="frame" x="53.666666666666657" y="391" width="283" height="20.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="283" id="0JP-ue-6hu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Validación facial incorrecta">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1175,6 +1241,9 @@
                             <constraint firstItem="PDy-vf-v7l" firstAttribute="centerX" secondItem="IT7-L5-0d0" secondAttribute="centerX" id="wBJ-sT-ekj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="incorrectFaceValidationLabel" destination="PDy-vf-v7l" id="7Ko-NY-h5i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FO0-oJ-qU1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
