@@ -11,7 +11,13 @@ import IdentyFaceLocal
 
 @available(iOS 13.0, *)
 class SelfieViewController: UIViewController {
-        
+    
+    @IBOutlet weak var vcTitleLabel: UILabel!
+    @IBOutlet weak var faceBiomLabel: UILabel!
+    @IBOutlet weak var focusFaceLabel: UILabel!
+    @IBOutlet weak var instructionsLabel: UILabel!
+    @IBOutlet weak var continueButton: UIButton!
+    
     var bundlePath = ""
     var selectedType : selectedType = .face
     
@@ -26,11 +32,20 @@ class SelfieViewController: UIViewController {
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
+        setTexts()
         
         bundlePath = Bundle.main.path(forResource: "1448-com.fad.bio-31-10-2022", ofType: "lic") ?? ""
         startColor = .systemBackground
         middleColor = .systemBackground
         endColor = .systemBackground
+    }
+    
+    func setTexts() {
+        vcTitleLabel.text = NSLocalizedString("face_vc_title", comment: "")
+        faceBiomLabel.text = NSLocalizedString("face_biometry_title", comment: "")
+        focusFaceLabel.text = NSLocalizedString("focus_face_label", comment: "")
+        instructionsLabel.text = NSLocalizedString("no_glasses_label", comment: "")
+        continueButton.setTitle(NSLocalizedString("continue_button", comment: ""), for: .normal)
     }
     
     @IBAction func startSelfie(_ sender: Any) {

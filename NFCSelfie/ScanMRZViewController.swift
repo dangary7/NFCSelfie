@@ -13,10 +13,16 @@ class ScanMRZViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var loaderContainer: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var vcTitle: UILabel!
+    @IBOutlet weak var passportLabel: UILabel!
+    @IBOutlet weak var instructionsLabel: UILabel!
+    @IBOutlet weak var recomendationsLabel: UILabel!
+    @IBOutlet weak var continueButton: UIButton!
     
     var isCustomUILayerEnabled: Bool = false
     
     override func viewDidLoad() {
+        setTexts()
         DocumentReaderService.shared.initializeDatabaseAndAPI(progress: { [weak self] state in
             guard let self = self else { return }
             switch state {
@@ -46,6 +52,14 @@ class ScanMRZViewController: UIViewController {
     
     @IBAction func startScan(_ sender: Any) {
         showCamera()
+    }
+    
+    func setTexts() {
+        vcTitle.text = NSLocalizedString("passport_vc_title", comment: "")
+        passportLabel.text = NSLocalizedString("passport_title", comment: "")
+        instructionsLabel.text = NSLocalizedString("take_picture", comment: "")
+        recomendationsLabel.text = NSLocalizedString("avoid_light_shadow", comment: "")
+        continueButton.setTitle(NSLocalizedString("continue_button", comment: ""), for: .normal)
     }
     
     private func enableUserInterfaceOnSuccess() {
@@ -186,15 +200,15 @@ class ScanMRZViewController: UIViewController {
         for textField in results.textResult.fields {
             guard let value = results.getTextFieldValueByType(fieldType: textField.fieldType, lcid: textField.lcid) else { continue }
             switch textField.fieldName {
-            case "Given name":
+            case NSLocalizedString("res_given_name", comment: ""):
                 usDef.setValue(value, forKey: "nombresOCR")
-            case "Surname":
+            case NSLocalizedString("res_surname", comment: ""):
                 usDef.setValue(value, forKey: "apellidosOCR")
-            case "Date of birth":
+            case NSLocalizedString("res_date_of_birth", comment: ""):
                 usDef.setValue(value, forKey: "dobOCR")
-            case "Date of expiry":
+            case NSLocalizedString("res_date_of_expiry", comment: ""):
                 usDef.setValue(value, forKey: "doeOCR")
-            case "Document number":
+            case NSLocalizedString("res_document_number", comment: ""):
                 usDef.setValue(value, forKey: "pasaporteOCR")
             default:
                 continue

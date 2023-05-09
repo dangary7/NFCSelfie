@@ -1,0 +1,90 @@
+/*Internet Check*/
+"identy_no_internet" = "Sem conexão com a Internet";
+"identy_enable_internet_message" = "Ative a Internet";
+"identy_alert" = "Alerta";
+"identy_settings" = "Configurações";
+"identy_cancel" = "Cancelar";
+"identy_no_internet" = "Verifique sua conexão com a Internet";
+"identy_enable_internet_message" = "Ative a Internet";
+"identy_initialization_failed" = "Falha na inicialização";
+"identy_jailbroken_device" = "O dispositivo foi desbloqueado";
+"identy_activity_paused" = "Atividade pausada";
+"identy_back_pressed" = "Atividade pausada ao clicar em voltar";
+"identy_timeout" = "Tempo limite da transação";
+"identy_limit_exceeded" = "Limite de transação excedido";
+"identy_nistgenration_failed" = "Falha ao gerar arquivo NIST";
+"identy_templategenration_failed" = "Falha ao gerar modelo";
+"identy_invalid_input" = "Entrada inválida";
+"id_unable_to_retrieve_template" = "Não foi possível recuperar o modelo";
+"id_unable_to_retrieve_file" = "Não foi possível recuperar o arquivo";
+"id_unable_to_convert_imageformat" = "Não foi possível converter para o formato de imagem";
+"id_file_not_found" = "Arquivo não encontrado";
+"id_encryption_failed" = "Falha na criptografia";
+"id_close" = "Fechar";
+"id_yes" = "Sim";
+"id_no" = "Não";
+"id_enrollment_completed" =  "Inscrição concluída";
+"id_success_match" =  "Verificado com sucesso";
+"id_authentication_unsuccessful" = "Falha na verificação";
+"id_capture_successful" = "Captura concluída";
+"identy_score" = "Pontuação";
+"id_something_is_weird_error" = "Algo está estranho";
+
+/*CameraViewController*/
+"id_badlighting" = "Evite sombras";
+"id_too_bright" = "Muito claro: mude para uma iluminação melhor";
+"id_too_dark" = "Muito escuro: mude para uma iluminação melhor";
+"id_searching_face" = "Pesquisando rosto";
+
+"id_spoof" = "Spoof";
+"id_hold" = "Por favor, aguarde";
+"id_hold_0" = "Por favor, aguarde 0";
+"id_hold_1" = "Por favor, aguarde 1";
+"id_hold_2" = "Por favor, aguarde 2";
+"id_hold_3" = "Por favor, aguarde 3";
+"id_hold_4" = "Por favor, aguarde 4";
+"id_capturing" = "Capturando..";
+"id_captured" = "Capturado";
+"id_inside_guide" = "Por favor, permaneça no local indicado";
+"id_stable" = "Por favor, fique parado";
+
+/*IntroScreenViewController*/
+"id_next" = "Próximo";
+"id_dshow_again" = "Não mostrar novamente";
+"identy_please_wait" = "Processando...";
+"id_keep_head_straight" = "Mantenha a cabeça reta";
+
+/*Capture*/
+"id_bring_face_inside" = "Posicione o rosto dentro";
+"id_bring_face_closer" = "Aproximar o rosto";
+"id_center_face" = "Olhe direto";
+"id_move_face_away" = "Afaste seu rosto";
+"id_frame_your_face" = "Emoldure seu rosto";
+"id_alert_box" =  "Alerta";
+"id_alert_msg" = "Algo está errado, tente novamente";
+"id_alert_btn"  = "OK";
+"id_alert_nonetwork" = "Sem conexão de rede";
+"id_phone_to_eye_level" = "Coloque o telefone ao nível dos olhos";
+"id_face_oval_center" = "Centrar seu rosto no local indicado";
+"id_face_look_straight" = "Olhar para frente";
+"id_face_looking_down" = "Olhe para cima para ficar paralelo à câmera";
+"id_face_looking_right" = "Olhe para direita, por favor, olhe para frente";
+"id_face_looking_left" = "Olhe para a esquerda, por favor, olhe para frente";
+"id_face_looking_up" = "Olhe para baixo para ficar paralelo à câmera";
+"id_face_move_up" = "Mover face para cima";
+"id_face_move_down" = "Mover face para baixo";
+"id_eyes_closed" = "Olhos Fechados";
+"identy_camera_permission"  = "Permissão para acessar a câmera";
+"identy_camera_permission_message" = "O aplicativo não tem permissão para usar a câmera, altere as configurações de privacidade";
+"identy_initialize" = "Inicializando...";
+"identy_exit" = "Deseja sair do Capture?";
+
+/*Spoof Alert*/
+"id_at_timed_out" = "A iluminação não está bem";
+"id_something_weird" = "Algo está bem, mova um pouco para mudar a iluminação";
+"id_try_again_btn"   = "Tente novamente";
+"id_nistcreated" = "Arquivo ANSI/NIST gerado...";
+"id_noface" = "Nenhum rosto detectado";
+"id_timeout" = "Tempo esgotado";
+"id_unsuccessful_recognition" =  "Reconhecimento sem sucesso";
+"id_ok" = "Ok";

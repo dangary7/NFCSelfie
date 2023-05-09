@@ -1,0 +1,83 @@
+//INITIAL SCREEN
+"passport_vc_title" = "Pasaporte 1/3";
+"passport_title" = "Pasaporte";
+"take_picture" = "Toma una foto de tu pasaporte";
+"avoid_light_shadow" = "Evita las luces o sombras directas en el pasaporte";
+"continue_button" = "Continuar";
+
+//OCR REVIEW SCREEN
+"validate_data" = "Valida que tus datos sean correctos";
+"given_names_label" = "Nombre(s)";
+"surname_label" = "Apellido(s)";
+"birth_day_label" = "Fecha de nacimiento";
+"passport_number_label" = "Número de pasaporte";
+"validate_button" = "Validar pasaporte";
+
+//FACE CAPTURE SCREEN
+"face_vc_title" = "Biometría facial 2/3";
+"face_biometry_title" = "Biometría facial";
+"focus_face_label" = "Enfoca tu cara dentro del óvalo";
+"no_glasses_label" = "No uses lentes de sol, gafas, gorras u otros elementos que dificulten la identificación de tu cara";
+
+//FACE CAPTURE BYPASS SCREEN
+"success_face_capture_label" = "Captura facial exitosa";
+
+//FACE CAPTURE VALIDATION SCREEN
+"good_picture_tittle" = "¿La foto es correcta?";
+"data_can_be_read" = "Asegúrate que los datos de tu pasaporte sean legibles";
+"yes_continue_button" = "Si, continuar";
+"capture_again_button" = "Volver a tomar foto";
+
+//NFC SCREEN
+"nfc_vc_title" = "Pasaporte 3/3";
+"nfc_title" = "Acerca tu pasaporte";
+"nfc_passport_label" = "Coloca tu pasaporte detrás de tu dispositivo";
+
+//NFC PROCESSING SCREEN
+"nfc_processing_title" = "Procesando";
+"wait_a_moment_label" = "Espera un momento";
+
+//RESULT SCREEN
+"validation_succes_title" = "Validación exitosa";
+"validation_fail_title" = "Validación fallida";
+"similarity_found_label" = "de similaridad";
+
+//INVALID PASSPORT SCREEN
+"invalid_passport_title" = "Pasaporte invalido";
+"invalid_passport_label" = "Los datos del pasaporte son incorrectos, vuelve a intentarlo";
+"try_again_button" = "Volver a intentar";
+
+//NO CHIP DETECTED SCREEN
+"no_chip_title" = "Chip no detectado";
+"no_chip_label" = "Si tu pasaporte cuenta con chip, vuelve a intentarlo";
+
+//INCORRECT PASSPORT SCREEN
+"incorrect_passport_title" = "Pasaporte incorrecto";
+"incorrect_passport_label" = "Los datos no coinciden, asegúrate de ingresar el pasaporte correcto";
+
+//UNSUPPORTED PASSPORT SCREEN
+"unsupported_passport_title" = "Pasaporte no compatible";
+"unsupported_passport_label" = "El chip no cuenta con los parámetros para validar la identidad, realiza de nuevo el proceso con otro pasaporte";
+"try_other_passport_button" = "Intentar con otro pasaporte";
+
+//FACE VALIDATION FAILED SCREEN
+"failed_facial_verification_label" = "Validación facial incorrecta";
+
+//RESPONSE KEYS
+"res_given_name" = "Nombre";
+"res_surname" = "Apellido";
+"res_date_of_birth" = "Fecha de nacimiento";
+"res_date_of_expiry" = "Fecha de expiración";
+"res_document_number" = "Número de documento";
+
+//NFC VIEW MESSAGES
+"reques_present_passport" = "Manten tu iPhone cerca de tu pasaporte";
+"authenticating_with_passport" = "Autenticando con pasaporte.....";
+"reading_data_group_progress" = "Leyendo";
+"tag_not_valid_error" = "Tag no valido";
+"more_than_one_tag_found_error" = "Mas de 1 tag encontrado. Presenta unicamente 1 tag";
+"connection_error" = "Error de conexión. Intenta nuevamente";
+"invalid_mrz_key_error" = "Llave MRZ no válida para este documento";
+"response_error" = "Hubo un problema leyendo el pasaporte";
+"generic_response_error" = "Hubo un problema leyendo el pasaporte. Intenta nuevamente";
+"successful_read" = "Pasaporte leído correctamente";

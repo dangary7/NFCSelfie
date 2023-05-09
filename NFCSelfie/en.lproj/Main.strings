@@ -1,0 +1,90 @@
+/*Internet Check*/
+"identy_no_internet" = "No internet connection";
+"identy_enable_internet_message" = "Please enable Internet";
+"identy_alert" = "Alert";
+"identy_settings" = "Settings";
+"identy_cancel" = "Cancel";
+"identy_no_internet" = "Please check your Internet connection";
+"identy_enable_internet_message" = "Please enable Internet";
+"identy_initialization_failed" = "Initialization Failed";
+"identy_jailbroken_device" = "Device is Jailbroken";
+"identy_activity_paused" = "Activity paused";
+"identy_back_pressed" = "Activity paused on clicking back";
+"identy_timeout" = "Transaction Timeout";
+"identy_limit_exceeded" = "Transaction limit exceeded";
+"identy_nistgenration_failed" = "Failed to generate NIST file";
+"identy_templategenration_failed" = "Failed to generate Template";
+"identy_invalid_input" = "Invalid input";
+"id_unable_to_retrieve_template" = "Unable to retrieve Template";
+"id_unable_to_retrieve_file" = "Unable to retrieve File";
+"id_unable_to_convert_imageformat" = "Unable to convert to Image Format";
+"id_file_not_found" = "File not found";
+"id_encryption_failed" = "Encryption Failed";
+"id_close" = "Close";
+"id_yes" = "Yes";
+"id_no" = "No";
+"id_enrollment_completed" =  "Enrollment Completed";
+"id_success_match" =  "Successfully Verified";
+"id_authentication_unsuccessful" = "Verification Failed";
+"id_capture_successful" = "Capture Completed";
+"identy_score" = "Score";
+"id_something_is_weird_error" = "Something is Weird";
+
+/*CameraViewController*/
+"id_badlighting" = "Avoid shadows";
+"id_too_bright" = "Too Bright: Move To Better Lighting";
+"id_too_dark" = "Too Dark: Move To Better Lighting";
+"id_searching_face" = "Searching Face";
+
+"id_spoof" = "Spoof";
+"id_hold" = "Please hold";
+"id_hold_0" = "Please hold 0";
+"id_hold_1" = "Please hold 1";
+"id_hold_2" = "Please hold 2";
+"id_hold_3" = "Please hold 3";
+"id_hold_4" = "Please hold 4";
+"id_capturing" = "Capturing..";
+"id_captured" = "Captured";
+"id_inside_guide" = "Please be inside the guide";
+"id_stable" = "Please be stable";
+
+/*IntroScreenViewController*/
+"id_next" = "Next";
+"id_dshow_again" = "Don't show me again";
+"identy_please_wait" = "Processing...";
+"id_keep_head_straight" = "Keep your head straight";
+
+/*Capture*/
+"id_bring_face_inside" = "Bring face inside";
+"id_bring_face_closer" = "Bring face closer";
+"id_center_face" = "Look straight";
+"id_move_face_away" = "Move your face away";
+"id_frame_your_face" = "Frame your face";
+"id_alert_box" =  "Alert";
+"id_alert_msg" = "Something is wrong please try again";
+"id_alert_btn"  = "OK";
+"id_alert_nonetwork" = "No network Connection";
+"id_phone_to_eye_level" = "Bring phone to eye level";
+"id_face_oval_center" = "Center your face in oval";
+"id_face_look_straight" = "Look Straight";
+"id_face_looking_down" = "Look up to be parallel to camera";
+"id_face_looking_right" = "Looking Right, Please Look straight";
+"id_face_looking_left" = "Looking Left, Please Look straight";
+"id_face_looking_up" = "Look Down to be parallel to camera";
+"id_face_move_up" = "Move face up";
+"id_face_move_down" = "Move face down";
+"id_eyes_closed" = "Eyes Closed";
+"identy_camera_permission"  = "Permission to access Camera";
+"identy_camera_permission_message" = "App doesn't have permission to use the camera, please change privacy settings";
+"identy_initialize" = "Initializing...";
+"identy_exit" = "Do you want to exit Capture?";
+
+/*Spoof Alert*/
+"id_at_timed_out" = "Lighting is weird";
+"id_something_weird" = "Something is weird, move slightly to change lighting";
+"id_try_again_btn"   = "Try again";
+"id_nistcreated" = "ANSI/NIST file generated...";
+"id_noface" = "No face detected";
+"id_timeout" = "Timed Out";
+"id_unsuccessful_recognition" =  "Unsuccessful Recognition";
+"id_ok" = "Ok";
