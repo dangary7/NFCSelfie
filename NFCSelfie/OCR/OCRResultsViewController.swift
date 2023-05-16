@@ -24,6 +24,8 @@ class OCRResultsViewController: UIViewController {
     @IBOutlet weak var apellidosTextField: UITextField!
     @IBOutlet weak var dobTextField: UITextField!
     @IBOutlet weak var pasaporteTextField: UITextField!
+    @IBOutlet weak var dateOfExpiryLabel: UILabel!
+    @IBOutlet weak var doeTextField: UITextField!
     
     override func viewDidLoad() {
         setTexts()
@@ -32,6 +34,7 @@ class OCRResultsViewController: UIViewController {
         apellidosTextField.text = usDef.string(forKey: "apellidosOCR")
         dobTextField.text = usDef.string(forKey: "dobOCR")
         pasaporteTextField.text = usDef.string(forKey: "pasaporteOCR")
+        doeTextField.text = usDef.string(forKey: "doeOCR")
         
         nombresTextField.delegate = self
         apellidosTextField.delegate = self
@@ -46,6 +49,7 @@ class OCRResultsViewController: UIViewController {
         namesLabel.text = NSLocalizedString("given_names_label", comment: "")
         familyNamesLabel.text = NSLocalizedString("surname_label", comment: "")
         dateOfBirthLabel.text = NSLocalizedString("birth_day_label", comment: "")
+        dateOfExpiryLabel.text = NSLocalizedString("expiry_date_label}", comment: "")
         passportNumberLabel.text = NSLocalizedString("passport_number_label", comment: "")
         validateButton.setTitle(NSLocalizedString("validate_button", comment: ""), for: .normal)
     }

@@ -10,6 +10,7 @@
 "given_names_label" = "Name(s)";
 "surname_label" = "Surname(s)";
 "birth_day_label" = "Date of birth";
+"expiry_date_label" = "Date of expiry";
 "passport_number_label" = "Passport number";
 "validate_button" = "Validate passport";
 

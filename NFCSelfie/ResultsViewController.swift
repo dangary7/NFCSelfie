@@ -24,6 +24,8 @@ class ResultsViewController : UIViewController {
     @IBOutlet weak var familyNamesLabel: UILabel!
     @IBOutlet weak var dateOfBirthLabel: UILabel!
     @IBOutlet weak var passportNumberLabel: UILabel!
+    @IBOutlet weak var fechaVencimiento: UILabel!
+    @IBOutlet weak var dateOfExpiryLabel: UILabel!
     
     var passport = NFCPassportModel()
     
@@ -36,13 +38,9 @@ class ResultsViewController : UIViewController {
         primerApellido.text = usDef.string(forKey: "apellido")
         noPasaporte.text = usDef.string(forKey: "numeroPasaporte")
         fechaNacimiento.text = usDef.string(forKey: "dobOCR")
+        fechaVencimiento.text = usDef.string(forKey: "doeOCR")
         NFCImage.image = UIImage(data: usDef.data(forKey: "foto")!)
         selfieImage.image = UIImage(data: usDef.data(forKey: "selfie")!)
-        
-        /*if usDef.float(forKey: "score") < 50 {
-            indicatorView.backgroundColor = UIColor.red
-            indicatorLabel.text = "Validación no exitosa"
-        }*/
     }
     
     func setTexts() {
@@ -56,9 +54,9 @@ class ResultsViewController : UIViewController {
         namesLabel.text = NSLocalizedString("given_names_label", comment: "")
         familyNamesLabel.text = NSLocalizedString("surname_label", comment: "")
         dateOfBirthLabel.text = NSLocalizedString("birth_day_label", comment: "")
+        dateOfExpiryLabel.text = NSLocalizedString("expiry_date_label", comment: "")
         passportNumberLabel.text = NSLocalizedString("passport_number_label", comment: "")
         
-        //let temp: String = "\(usDef.float(forKey: "score"))" + NSLocalizedString("similarity_found_label", comment: "")
         let temp = "\(usDef.float(forKey: "score"))% " + String(format: NSLocalizedString("similarity_found_label", comment: ""), "")
         
         nivelSimilitud.text = temp
