@@ -92,7 +92,7 @@ class NFCStartViewController: UIViewController {
             let customMessageHandler : (NFCViewDisplayMessage)->String? = { (displayMessage) in
                 switch displayMessage {
                     case .requestPresentPassport:
-                        return "Manten tu iPhone cerca de tu pasaporte."
+                        return NSLocalizedString("reques_present_passport", comment: "")
                     default:
                         return nil
                 }

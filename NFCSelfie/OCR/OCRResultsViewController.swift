@@ -32,6 +32,11 @@ class OCRResultsViewController: UIViewController {
         apellidosTextField.text = usDef.string(forKey: "apellidosOCR")
         dobTextField.text = usDef.string(forKey: "dobOCR")
         pasaporteTextField.text = usDef.string(forKey: "pasaporteOCR")
+        
+        nombresTextField.delegate = self
+        apellidosTextField.delegate = self
+        dobTextField.delegate = self
+        pasaporteTextField.delegate = self
     }
     
     func setTexts() {
@@ -50,5 +55,20 @@ class OCRResultsViewController: UIViewController {
         let nextVC = storyboard.instantiateViewController(withIdentifier: "SelfieViewController")
         nextVC.modalPresentationStyle = .fullScreen
         present(nextVC, animated: true)
+    }
+    
+    func updateOCRData() {
+        usDef.set(nombresTextField.text, forKey: "nombresOCR")
+        usDef.set(apellidosTextField.text, forKey: "apellidosOCR")
+        usDef.set(dobTextField.text, forKey: "dobOCR")
+        usDef.set(pasaporteTextField.text, forKey: "pasaporteOCR")
+    }
+}
+
+extension OCRResultsViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        updateOCRData()
+        return false
     }
 }
