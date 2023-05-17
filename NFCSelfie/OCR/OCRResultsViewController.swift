@@ -49,7 +49,7 @@ class OCRResultsViewController: UIViewController {
         namesLabel.text = NSLocalizedString("given_names_label", comment: "")
         familyNamesLabel.text = NSLocalizedString("surname_label", comment: "")
         dateOfBirthLabel.text = NSLocalizedString("birth_day_label", comment: "")
-        dateOfExpiryLabel.text = NSLocalizedString("expiry_date_label}", comment: "")
+        dateOfExpiryLabel.text = NSLocalizedString("expiry_date_label", comment: "")
         passportNumberLabel.text = NSLocalizedString("passport_number_label", comment: "")
         validateButton.setTitle(NSLocalizedString("validate_button", comment: ""), for: .normal)
     }
